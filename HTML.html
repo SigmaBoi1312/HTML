@@ -38,7 +38,36 @@ video, img {
     background: white; /* Add a background to prevent being obscured */
     border: 1px solid black; /* Optional: For debugging */
 }
+
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: #333;
+    display: flex;
+    justify-content: space-around;
+    padding: 10px 0;
+    z-index: 1000; /* Ensure it stays above all other elements */
+}
+
+.navbar a {
+    text-decoration: none;
+    color: white;
+    padding: 10px 20px;
+    font-size: 18px;
+}
+
+.navbar a:hover {
+    background-color: #575757;
+    border-radius: 5px;
+}
 </style>
+<div class="navbar">
+    <a href="https://sigmaboi1312.github.io/HTML/HTML">Gifs</a>
+    <a href="https://sigmaboi1312.github.io/HTML/ADS">Ads</a>
+    <a href="https://sigmaboi1312.github.io/HTML/BRECKIE">Breckie</a>
+    <a href="https://sigmaboi1312.github.io/HTML/OLIVIA">Olivia</a>
+</div>
 <audio class="Audio1" controls autoplay>
   <source src="voice1.mp3" type="audio/MP3">
 </audio>
