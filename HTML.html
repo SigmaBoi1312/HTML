@@ -21,7 +21,16 @@ video, img {
     z-index: 1; /* Ensure it's below the audio */
 }
 
-audio {
+.Audio1 {
+    position: fixed; /* Stay at a fixed position */
+    bottom: 10px; /* Align at the bottom of the viewport */
+    left: 10px; /* Adjust horizontal position */
+    z-index: 9999; /* Bring above everything else */
+    background: white; /* Add a background to prevent being obscured */
+    border: 1px solid black; /* Optional: For debugging */
+}
+
+.Audio2 {
     position: fixed; /* Stay at a fixed position */
     bottom: 10px; /* Align at the bottom of the viewport */
     left: 10px; /* Adjust horizontal position */
@@ -30,10 +39,10 @@ audio {
     border: 1px solid black; /* Optional: For debugging */
 }
 </style>
-<audio controls autoplay>
+<audio class="Audio1" controls autoplay>
   <source src="voice1.mp3" type="audio/MP3">
 </audio>
-<audio controls autoplay>
+<audio class="Audio2" controls autoplay>
   <source src="Voice2.mp3" type="audio/mp3">
 </audio>
 </head>
