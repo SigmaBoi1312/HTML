@@ -1,27 +1,34 @@
 <html> <head><img src="https://cdn1-images.nutaku.com/images/manage/games/project-qt/pc/skin-jpg.jpg?20240124152804" alt="Project QT - RPG Game" title="Play Project QT on Nutaku">
 <style>
-    html, body {
-      height: 100%;
-      margin: 0;
-      overflow-y: auto; /* Allow vertical scrolling */
-    }
+html, body {
+    height: 100%;
+    margin: 0;
+    overflow-y: auto; /* Allow vertical scrolling */
+}
 
-    body {
-      display: flex;
-      flex-direction: column; /* Stack content vertically */
-      gap: 0;
-    }
+body {
+    display: flex;
+    flex-direction: column; /* Stack content vertically */
+    gap: 0;
+    padding-bottom: 60px; /* Space for the audio player */
+}
 
-    video, img {
-      width: 100%;
-      height: auto; /* Maintain aspect ratio */
-      object-fit: cover; /* Ensure content covers the width */
-    }
+video, img {
+    width: 100%;
+    height: auto; /* Maintain aspect ratio */
+    object-fit: cover; /* Ensure content covers the width */
+    position: relative; /* Prevent overlapping stacking context */
+    z-index: 1; /* Ensure it's below the audio */
+}
 
-    audio {
-        position: relative;
-        z-index: 9999;
-    }
+audio {
+    position: fixed; /* Stay at a fixed position */
+    bottom: 10px; /* Align at the bottom of the viewport */
+    left: 10px; /* Adjust horizontal position */
+    z-index: 9999; /* Bring above everything else */
+    background: white; /* Add a background to prevent being obscured */
+    border: 1px solid black; /* Optional: For debugging */
+}
 </style>
 <audio controls autoplay>
   <source src="voice1.mp3" type="audio/MP3">
