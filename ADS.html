@@ -1,0 +1,131 @@
+<html> <head><img src="https://cdn1-images.nutaku.com/images/manage/games/project-qt/pc/skin-jpg.jpg?20240124152804" alt="Project QT - RPG Game" title="Play Project QT on Nutaku">
+<style>
+html, body {
+    height: 100%;
+    margin: 0;
+    overflow-y: auto; /* Allow vertical scrolling */
+}
+
+body {
+    display: flex;
+    flex-direction: column; /* Stack content vertically */
+    gap: 0;
+    padding-bottom: 60px; /* Space for the audio player */
+}
+
+video, img {
+    width: 100%;
+    height: auto; /* Maintain aspect ratio */
+    object-fit: cover; /* Ensure content covers the width */
+    position: relative; /* Prevent overlapping stacking context */
+    z-index: 1; /* Ensure it's below the audio */
+}
+
+.Audio1 {
+    position: fixed; /* Stay at a fixed position */
+    bottom: 5%; /* Align at the bottom of the viewport */
+    left: 5%; /* Adjust horizontal position */
+    z-index: 9999; /* Bring above everything else */
+    background: white; /* Add a background to prevent being obscured */
+    border: 1px solid black; /* Optional: For debugging */
+}
+
+.Audio2 {
+    position: fixed; /* Stay at a fixed position */
+    bottom: 5%; /* Align at the bottom of the viewport */
+    left: 65%; /* Adjust horizontal position */
+    z-index: 9999; /* Bring above everything else */
+    background: white; /* Add a background to prevent being obscured */
+    border: 1px solid black; /* Optional: For debugging */
+}
+
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: #333;
+    display: flex;
+    justify-content: space-around;
+    padding: 10px 0;
+    z-index: 1000; /* Ensure it stays above all other elements */
+}
+
+.navbar a {
+    text-decoration: none;
+    color: white;
+    padding: 10px 20px;
+    font-size: 18px;
+}
+
+.navbar a:hover {
+    background-color: #575757;
+    border-radius: 5px;
+}
+</style>
+<div class="navbar">
+    <a href="https://sigmaboi1312.github.io/HTML/HTML">Gifs</a>
+    <a href="https://sigmaboi1312.github.io/HTML/ADS">Ads</a>
+    <a href="https://sigmaboi1312.github.io/HTML/BRECKIE">Breckie</a>
+    <a href="https://sigmaboi1312.github.io/HTML/OLIVIA">Olivia</a>
+</div>
+<audio class="Audio1" controls autoplay>
+  <source src="voice1.mp3" type="audio/MP3">
+</audio>
+<audio class="Audio2" controls autoplay>
+  <source src="Voice2.mp3" type="audio/mp3">
+</audio>
+</head>
+<body>
+<video id="video" class="adaptive_video_player" autoplay="" muted="" loop="" playsinline="" data-webp="https://ht-cdn2.adtng.com/a7/creatives/39/1597/818640/1098678/1098678_video.webp" data-gif="https://ht-cdn2.adtng.com/a7/creatives/39/1597/818640/1098678/1098678_video.gif" data-webp-low="https://ht-cdn2.adtng.com/a7/creatives/39/1597/818640/1098678/1098678_video_low.webp" data-mp4-low="https://ht-cdn2.adtng.com/a7/creatives/39/1597/818640/1098678/1098678_video_low.mp4" data-webp-canvid="https://ht-cdn2.adtng.com/a7/creatives/39/1597/818640/1098678/1098678_sprite_001.webp" data-jpg-canvid="https://ht-cdn2.adtng.com/a7/creatives/39/1597/818640/1098678/1098678_sprite_001.jpg"><source id="mp4" src="https://ht-cdn2.adtng.com/a7/creatives/39/1597/818640/1098678/1098678_video.mp4" type="video/mp4"><!--<source id="webm" src="https://ht-cdn2.adtng.com/a7/creatives/39/1597/818640/1098678/1098678_video.webm" type="video/webm" />--></video>
+<video id="video" class="adaptive_video_player" autoplay="" muted="" loop="" playsinline="" data-webp="https://ht-cdn2.adtng.com/a7/creatives/39/1597/818640/1096526/1096526_video.webp" data-gif="https://ht-cdn2.adtng.com/a7/creatives/39/1597/818640/1096526/1096526_video.gif" data-webp-low="https://ht-cdn2.adtng.com/a7/creatives/39/1597/818640/1096526/1096526_video_low.webp" data-mp4-low="https://ht-cdn2.adtng.com/a7/creatives/39/1597/818640/1096526/1096526_video_low.mp4" data-webp-canvid="https://ht-cdn2.adtng.com/a7/creatives/39/1597/818640/1096526/1096526_sprite_001.webp" data-jpg-canvid="https://ht-cdn2.adtng.com/a7/creatives/39/1597/818640/1096526/1096526_sprite_001.jpg"><source id="mp4" src="https://ht-cdn2.adtng.com/a7/creatives/39/1597/818640/1096526/1096526_video.mp4" type="video/mp4"><!--<source id="webm" src="https://ht-cdn2.adtng.com/a7/creatives/39/1597/818640/1096526/1096526_video.webm" type="video/webm" />--></video>
+<video id="video" class="adaptive_video_player" autoplay="" muted="" loop="" playsinline="" data-webp="https://hw-cdn2.adtng.com/a7/creatives/39/1597/818640/1100403/1100403_video.webp" data-gif="https://hw-cdn2.adtng.com/a7/creatives/39/1597/818640/1100403/1100403_video.gif" data-webp-low="https://hw-cdn2.adtng.com/a7/creatives/39/1597/818640/1100403/1100403_video_low.webp" data-mp4-low="https://hw-cdn2.adtng.com/a7/creatives/39/1597/818640/1100403/1100403_video_low.mp4" data-webp-canvid="https://hw-cdn2.adtng.com/a7/creatives/39/1597/818640/1100403/1100403_sprite_001.webp" data-jpg-canvid="https://hw-cdn2.adtng.com/a7/creatives/39/1597/818640/1100403/1100403_sprite_001.jpg"><source id="mp4" src="https://hw-cdn2.adtng.com/a7/creatives/39/1597/818640/1100403/1100403_video.mp4" type="video/mp4"><!--<source id="webm" src="https://hw-cdn2.adtng.com/a7/creatives/39/1597/818640/1100403/1100403_video.webm" type="video/webm" />--></video>
+<video id="video" class="adaptive_video_player" autoplay="" muted="" loop="" playsinline="" data-webp="https://hw-cdn2.adtng.com/a7/creatives/39/1597/818640/1100121/1100121_video.webp" data-gif="https://hw-cdn2.adtng.com/a7/creatives/39/1597/818640/1100121/1100121_video.gif" data-webp-low="https://hw-cdn2.adtng.com/a7/creatives/39/1597/818640/1100121/1100121_video_low.webp" data-mp4-low="https://hw-cdn2.adtng.com/a7/creatives/39/1597/818640/1100121/1100121_video_low.mp4" data-webp-canvid="https://hw-cdn2.adtng.com/a7/creatives/39/1597/818640/1100121/1100121_sprite_001.webp" data-jpg-canvid="https://hw-cdn2.adtng.com/a7/creatives/39/1597/818640/1100121/1100121_sprite_001.jpg"><source id="mp4" src="https://hw-cdn2.adtng.com/a7/creatives/39/1597/818640/1100121/1100121_video.mp4" type="video/mp4"><!--<source id="webm" src="https://hw-cdn2.adtng.com/a7/creatives/39/1597/818640/1100121/1100121_video.webm" type="video/webm" />--></video>
+<video id="video" class="adaptive_video_player" autoplay="" muted="" loop="" playsinline="" data-webp="https://hw-cdn2.adtng.com/a7/creatives/39/1393/804105/1054988/1054988_video.webp" data-gif="https://hw-cdn2.adtng.com/a7/creatives/39/1393/804105/1054988/1054988_video.gif" data-webp-low="https://hw-cdn2.adtng.com/a7/creatives/39/1393/804105/1054988/1054988_video_low.webp" data-mp4-low="https://hw-cdn2.adtng.com/a7/creatives/39/1393/804105/1054988/1054988_video_low.mp4" data-webp-canvid="https://hw-cdn2.adtng.com/a7/creatives/39/1393/804105/1054988/1054988_sprite_001.webp" data-jpg-canvid="https://hw-cdn2.adtng.com/a7/creatives/39/1393/804105/1054988/1054988_sprite_001.jpg"><source id="mp4" src="https://hw-cdn2.adtng.com/a7/creatives/39/1393/804105/1054988/1054988_video.mp4" type="video/mp4"><!--<source id="webm" src="https://hw-cdn2.adtng.com/a7/creatives/39/1393/804105/1054988/1054988_video.webm" type="video/webm" />--></video>
+<video id="video" class="adaptive_video_player" autoplay="" muted="" loop="" playsinline="" data-webp="https://hw-cdn2.adtng.com/a7/creatives/39/1393/804105/991323/991323_video.webp" data-gif="https://hw-cdn2.adtng.com/a7/creatives/39/1393/804105/991323/991323_video.gif" data-webp-low="https://hw-cdn2.adtng.com/a7/creatives/39/1393/804105/991323/991323_video_low.webp" data-mp4-low="https://hw-cdn2.adtng.com/a7/creatives/39/1393/804105/991323/991323_video_low.mp4" data-webp-canvid="https://hw-cdn2.adtng.com/a7/creatives/39/1393/804105/991323/991323_sprite_001.webp" data-jpg-canvid="https://hw-cdn2.adtng.com/a7/creatives/39/1393/804105/991323/991323_sprite_001.jpg"><source id="mp4" src="https://hw-cdn2.adtng.com/a7/creatives/39/1393/804105/991323/991323_video.mp4" type="video/mp4"><!--<source id="webm" src="https://hw-cdn2.adtng.com/a7/creatives/39/1393/804105/991323/991323_video.webm" type="video/webm" />--></video>
+<video id="video" class="adaptive_video_player" autoplay="" muted="" loop="" playsinline="" data-webp="https://hw-cdn2.adtng.com/a7/creatives/39/1393/804105/1062016/1062016_video.webp" data-gif="https://hw-cdn2.adtng.com/a7/creatives/39/1393/804105/1062016/1062016_video.gif" data-webp-low="https://hw-cdn2.adtng.com/a7/creatives/39/1393/804105/1062016/1062016_video_low.webp" data-mp4-low="https://hw-cdn2.adtng.com/a7/creatives/39/1393/804105/1062016/1062016_video_low.mp4" data-webp-canvid="https://hw-cdn2.adtng.com/a7/creatives/39/1393/804105/1062016/1062016_sprite_001.webp" data-jpg-canvid="https://hw-cdn2.adtng.com/a7/creatives/39/1393/804105/1062016/1062016_sprite_001.jpg"><source id="mp4" src="https://hw-cdn2.adtng.com/a7/creatives/39/1393/804105/1062016/1062016_video.mp4" type="video/mp4"><!--<source id="webm" src="https://hw-cdn2.adtng.com/a7/creatives/39/1393/804105/1062016/1062016_video.webm" type="video/webm" />--></video>
+<video id="video" class="adaptive_video_player" autoplay="" muted="" loop="" playsinline="" data-webp="https://hw-cdn2.adtng.com/a7/creatives/39/1393/804105/1055216/1055216_video.webp" data-gif="https://hw-cdn2.adtng.com/a7/creatives/39/1393/804105/1055216/1055216_video.gif" data-webp-low="https://hw-cdn2.adtng.com/a7/creatives/39/1393/804105/1055216/1055216_video_low.webp" data-mp4-low="https://hw-cdn2.adtng.com/a7/creatives/39/1393/804105/1055216/1055216_video_low.mp4" data-webp-canvid="https://hw-cdn2.adtng.com/a7/creatives/39/1393/804105/1055216/1055216_sprite_001.webp" data-jpg-canvid="https://hw-cdn2.adtng.com/a7/creatives/39/1393/804105/1055216/1055216_sprite_001.jpg"><source id="mp4" src="https://hw-cdn2.adtng.com/a7/creatives/39/1393/804105/1055216/1055216_video.mp4" type="video/mp4"><!--<source id="webm" src="https://hw-cdn2.adtng.com/a7/creatives/39/1393/804105/1055216/1055216_video.webm" type="video/webm" />--></video>
+<video id="video" class="adaptive_video_player" autoplay="" muted="" loop="" playsinline="" data-webp="https://hw-cdn2.adtng.com/a7/creatives/39/1393/804105/1055224/1055224_video.webp" data-gif="https://hw-cdn2.adtng.com/a7/creatives/39/1393/804105/1055224/1055224_video.gif" data-webp-low="https://hw-cdn2.adtng.com/a7/creatives/39/1393/804105/1055224/1055224_video_low.webp" data-mp4-low="https://hw-cdn2.adtng.com/a7/creatives/39/1393/804105/1055224/1055224_video_low.mp4" data-webp-canvid="https://hw-cdn2.adtng.com/a7/creatives/39/1393/804105/1055224/1055224_sprite_001.webp" data-jpg-canvid="https://hw-cdn2.adtng.com/a7/creatives/39/1393/804105/1055224/1055224_sprite_001.jpg"><source id="mp4" src="https://hw-cdn2.adtng.com/a7/creatives/39/1393/804105/1055224/1055224_video.mp4" type="video/mp4"><!--<source id="webm" src="https://hw-cdn2.adtng.com/a7/creatives/39/1393/804105/1055224/1055224_video.webm" type="video/webm" />--></video>
+<video id="video" class="adaptive_video_player" autoplay="" muted="" loop="" playsinline="" data-webp="https://hw-cdn2.adtng.com/a7/creatives/39/1589/818344/1094683/1094683_video.webp" data-gif="https://hw-cdn2.adtng.com/a7/creatives/39/1589/818344/1094683/1094683_video.gif" data-webp-low="https://hw-cdn2.adtng.com/a7/creatives/39/1589/818344/1094683/1094683_video_low.webp" data-mp4-low="https://hw-cdn2.adtng.com/a7/creatives/39/1589/818344/1094683/1094683_video_low.mp4" data-webp-canvid="https://hw-cdn2.adtng.com/a7/creatives/39/1589/818344/1094683/1094683_sprite_001.webp" data-jpg-canvid="https://hw-cdn2.adtng.com/a7/creatives/39/1589/818344/1094683/1094683_sprite_001.jpg"><source id="mp4" src="https://hw-cdn2.adtng.com/a7/creatives/39/1589/818344/1094683/1094683_video.mp4" type="video/mp4"><!--<source id="webm" src="https://hw-cdn2.adtng.com/a7/creatives/39/1589/818344/1094683/1094683_video.webm" type="video/webm" />--></video>
+<video id="video" class="adaptive_video_player" autoplay="" muted="" loop="" playsinline="" data-webp="https://hw-cdn2.adtng.com/a7/creatives/39/1393/804105/1092267/1092267_video.webp" data-gif="https://hw-cdn2.adtng.com/a7/creatives/39/1393/804105/1092267/1092267_video.gif" data-webp-low="https://hw-cdn2.adtng.com/a7/creatives/39/1393/804105/1092267/1092267_video_low.webp" data-mp4-low="https://hw-cdn2.adtng.com/a7/creatives/39/1393/804105/1092267/1092267_video_low.mp4" data-webp-canvid="https://hw-cdn2.adtng.com/a7/creatives/39/1393/804105/1092267/1092267_sprite_001.webp" data-jpg-canvid="https://hw-cdn2.adtng.com/a7/creatives/39/1393/804105/1092267/1092267_sprite_001.jpg"><source id="mp4" src="https://hw-cdn2.adtng.com/a7/creatives/39/1393/804105/1092267/1092267_video.mp4" type="video/mp4"><!--<source id="webm" src="https://hw-cdn2.adtng.com/a7/creatives/39/1393/804105/1092267/1092267_video.webm" type="video/webm" />--></video>
+<video id="video" class="adaptive_video_player" autoplay="" muted="" loop="" playsinline="" data-webp="https://ht-cdn2.adtng.com/a7/creatives/39/1589/818344/1094663/1094663_video.webp" data-gif="https://ht-cdn2.adtng.com/a7/creatives/39/1589/818344/1094663/1094663_video.gif" data-webp-low="https://ht-cdn2.adtng.com/a7/creatives/39/1589/818344/1094663/1094663_video_low.webp" data-mp4-low="https://ht-cdn2.adtng.com/a7/creatives/39/1589/818344/1094663/1094663_video_low.mp4" data-webp-canvid="https://ht-cdn2.adtng.com/a7/creatives/39/1589/818344/1094663/1094663_sprite_001.webp" data-jpg-canvid="https://ht-cdn2.adtng.com/a7/creatives/39/1589/818344/1094663/1094663_sprite_001.jpg"><source id="mp4" src="https://ht-cdn2.adtng.com/a7/creatives/39/1589/818344/1094663/1094663_video.mp4" type="video/mp4"><!--<source id="webm" src="https://ht-cdn2.adtng.com/a7/creatives/39/1589/818344/1094663/1094663_video.webm" type="video/webm" />--></video>
+<video id="video" class="adaptive_video_player" autoplay="" muted="" loop="" playsinline="" data-webp="https://hw-cdn2.contentabc.com/a7/creatives/50/529/809730/961473/961473_video.webp" data-gif="https://hw-cdn2.contentabc.com/a7/creatives/50/529/809730/961473/961473_video.gif" data-webp-low="https://hw-cdn2.contentabc.com/a7/creatives/50/529/809730/961473/961473_video_low.webp" data-mp4-low="https://hw-cdn2.contentabc.com/a7/creatives/50/529/809730/961473/961473_video_low.mp4" data-webp-canvid="https://hw-cdn2.contentabc.com/a7/creatives/50/529/809730/961473/961473_sprite_001.webp" data-jpg-canvid="https://hw-cdn2.contentabc.com/a7/creatives/50/529/809730/961473/961473_sprite_001.jpg"><source id="mp4" src="https://hw-cdn2.contentabc.com/a7/creatives/50/529/809730/961473/961473_video.mp4" type="video/mp4"><!--<source id="webm" src="https://hw-cdn2.contentabc.com/a7/creatives/50/529/809730/961473/961473_video.webm" type="video/webm" />--></video>
+<video id="video" class="adaptive_video_player" autoplay="" muted="" loop="" playsinline="" data-webp="https://hw-cdn2.adtng.com/a7/creatives/39/1589/818344/1095123/1095123_video.webp" data-gif="https://hw-cdn2.adtng.com/a7/creatives/39/1589/818344/1095123/1095123_video.gif" data-webp-low="https://hw-cdn2.adtng.com/a7/creatives/39/1589/818344/1095123/1095123_video_low.webp" data-mp4-low="https://hw-cdn2.adtng.com/a7/creatives/39/1589/818344/1095123/1095123_video_low.mp4" data-webp-canvid="https://hw-cdn2.adtng.com/a7/creatives/39/1589/818344/1095123/1095123_sprite_001.webp" data-jpg-canvid="https://hw-cdn2.adtng.com/a7/creatives/39/1589/818344/1095123/1095123_sprite_001.jpg"><source id="mp4" src="https://hw-cdn2.adtng.com/a7/creatives/39/1589/818344/1095123/1095123_video.mp4" type="video/mp4"><!--<source id="webm" src="https://hw-cdn2.adtng.com/a7/creatives/39/1589/818344/1095123/1095123_video.webm" type="video/webm" />--></video>
+<video id="video" class="adaptive_video_player" autoplay="" muted="" loop="" playsinline="" data-webp="https://hw-cdn2.adtng.com/a7/creatives/39/1393/804105/1059834/1059834_video.webp" data-gif="https://hw-cdn2.adtng.com/a7/creatives/39/1393/804105/1059834/1059834_video.gif" data-webp-low="https://hw-cdn2.adtng.com/a7/creatives/39/1393/804105/1059834/1059834_video_low.webp" data-mp4-low="https://hw-cdn2.adtng.com/a7/creatives/39/1393/804105/1059834/1059834_video_low.mp4" data-webp-canvid="https://hw-cdn2.adtng.com/a7/creatives/39/1393/804105/1059834/1059834_sprite_001.webp" data-jpg-canvid="https://hw-cdn2.adtng.com/a7/creatives/39/1393/804105/1059834/1059834_sprite_001.jpg"><source id="mp4" src="https://hw-cdn2.adtng.com/a7/creatives/39/1393/804105/1059834/1059834_video.mp4" type="video/mp4"><!--<source id="webm" src="https://hw-cdn2.adtng.com/a7/creatives/39/1393/804105/1059834/1059834_video.webm" type="video/webm" />--></video>
+<video id="video" class="adaptive_video_player" autoplay="" muted="" loop="" playsinline="" data-webp="https://hw-cdn2.adtng.com/a7/creatives/39/1393/804105/1090263/1090263_video.webp" data-gif="https://hw-cdn2.adtng.com/a7/creatives/39/1393/804105/1090263/1090263_video.gif" data-webp-low="https://hw-cdn2.adtng.com/a7/creatives/39/1393/804105/1090263/1090263_video_low.webp" data-mp4-low="https://hw-cdn2.adtng.com/a7/creatives/39/1393/804105/1090263/1090263_video_low.mp4" data-webp-canvid="https://hw-cdn2.adtng.com/a7/creatives/39/1393/804105/1090263/1090263_sprite_001.webp" data-jpg-canvid="https://hw-cdn2.adtng.com/a7/creatives/39/1393/804105/1090263/1090263_sprite_001.jpg"><source id="mp4" src="https://hw-cdn2.adtng.com/a7/creatives/39/1393/804105/1090263/1090263_video.mp4" type="video/mp4"><!--<source id="webm" src="https://hw-cdn2.adtng.com/a7/creatives/39/1393/804105/1090263/1090263_video.webm" type="video/webm" />--></video>
+<video id="video" class="adaptive_video_player" autoplay="" muted="" loop="" playsinline="" data-webp="https://hw-cdn2.contentabc.com/a7/creatives/50/529/814141/1043050/1043050_video.webp" data-gif="https://hw-cdn2.contentabc.com/a7/creatives/50/529/814141/1043050/1043050_video.gif" data-webp-low="https://hw-cdn2.contentabc.com/a7/creatives/50/529/814141/1043050/1043050_video_low.webp" data-mp4-low="https://hw-cdn2.contentabc.com/a7/creatives/50/529/814141/1043050/1043050_video_low.mp4" data-webp-canvid="https://hw-cdn2.contentabc.com/a7/creatives/50/529/814141/1043050/1043050_sprite_001.webp" data-jpg-canvid="https://hw-cdn2.contentabc.com/a7/creatives/50/529/814141/1043050/1043050_sprite_001.jpg"><source id="mp4" src="https://hw-cdn2.contentabc.com/a7/creatives/50/529/814141/1043050/1043050_video.mp4" type="video/mp4"><!--<source id="webm" src="https://hw-cdn2.contentabc.com/a7/creatives/50/529/814141/1043050/1043050_video.webm" type="video/webm" />--></video>
+<video id="video" class="adaptive_video_player" autoplay="" muted="" loop="" playsinline="" data-webp="https://hw-cdn2.contentabc.com/a7/creatives/50/529/810529/971034/971034_video.webp" data-gif="https://hw-cdn2.contentabc.com/a7/creatives/50/529/810529/971034/971034_video.gif" data-webp-low="https://hw-cdn2.contentabc.com/a7/creatives/50/529/810529/971034/971034_video_low.webp" data-mp4-low="https://hw-cdn2.contentabc.com/a7/creatives/50/529/810529/971034/971034_video_low.mp4" data-webp-canvid="https://hw-cdn2.contentabc.com/a7/creatives/50/529/810529/971034/971034_sprite_001.webp" data-jpg-canvid="https://hw-cdn2.contentabc.com/a7/creatives/50/529/810529/971034/971034_sprite_001.jpg"><source id="mp4" src="https://hw-cdn2.contentabc.com/a7/creatives/50/529/810529/971034/971034_video.mp4" type="video/mp4"><!--<source id="webm" src="https://hw-cdn2.contentabc.com/a7/creatives/50/529/810529/971034/971034_video.webm" type="video/webm" />--></video>
+<video id="video" class="adaptive_video_player" autoplay="" muted="" loop="" playsinline="" data-webp="https://hw-cdn2.adtng.com/a7/creatives/39/1393/804105/1062016/1062016_video.webp" data-gif="https://hw-cdn2.adtng.com/a7/creatives/39/1393/804105/1062016/1062016_video.gif" data-webp-low="https://hw-cdn2.adtng.com/a7/creatives/39/1393/804105/1062016/1062016_video_low.webp" data-mp4-low="https://hw-cdn2.adtng.com/a7/creatives/39/1393/804105/1062016/1062016_video_low.mp4" data-webp-canvid="https://hw-cdn2.adtng.com/a7/creatives/39/1393/804105/1062016/1062016_sprite_001.webp" data-jpg-canvid="https://hw-cdn2.adtng.com/a7/creatives/39/1393/804105/1062016/1062016_sprite_001.jpg"><source id="mp4" src="https://hw-cdn2.adtng.com/a7/creatives/39/1393/804105/1062016/1062016_video.mp4" type="video/mp4"><!--<source id="webm" src="https://hw-cdn2.adtng.com/a7/creatives/39/1393/804105/1062016/1062016_video.webm" type="video/webm" />--></video>
+<video id="video" class="adaptive_video_player" autoplay="" muted="" loop="" playsinline="" data-webp="https://ht-cdn2.adtng.com/a7/creatives/39/1562/816853/1075171/1075171_video.webp" data-gif="https://ht-cdn2.adtng.com/a7/creatives/39/1562/816853/1075171/1075171_video.gif" data-webp-low="https://ht-cdn2.adtng.com/a7/creatives/39/1562/816853/1075171/1075171_video_low.webp" data-mp4-low="https://ht-cdn2.adtng.com/a7/creatives/39/1562/816853/1075171/1075171_video_low.mp4" data-webp-canvid="https://ht-cdn2.adtng.com/a7/creatives/39/1562/816853/1075171/1075171_sprite_001.webp" data-jpg-canvid="https://ht-cdn2.adtng.com/a7/creatives/39/1562/816853/1075171/1075171_sprite_001.jpg"><source id="mp4" src="https://ht-cdn2.adtng.com/a7/creatives/39/1562/816853/1075171/1075171_video.mp4" type="video/mp4"><!--<source id="webm" src="https://ht-cdn2.adtng.com/a7/creatives/39/1562/816853/1075171/1075171_video.webm" type="video/webm" />--></video>
+<!-- First Video -->
+  <video loop autoplay muted playsinline poster="girl-2.webp">
+    <source src="https://grefaunu.com/video/insta-date/girl_insta-3.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+
+  <!-- Second Video -->
+  <video loop autoplay muted playsinline poster="girl-4.webp">
+    <source src="https://grefaunu.com/video/insta-date/girl_insta-1.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+
+  <!-- Third Video -->
+  <video loop autoplay muted playsinline poster="girl-3.webp">
+    <source src="https://grefaunu.com/video/insta-date/girl_insta-5.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+
+  <!-- Fourth Video -->
+  <video loop autoplay muted playsinline poster="girl-1.webp">
+    <source src="https://grefaunu.com/video/insta-date/girl_insta-2.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+
+  <!-- Images -->
+  <img src="1.jpeg" alt="Image 1">
+  <img src="2.jpeg" alt="Image 2">
+  <img src="3.jpeg" alt="Image 3">
+  <img src="4.jpeg" alt="Image 4">
+  <img src="5.jpeg" alt="Image 5">
+  <img src="6.jpeg" alt="Image 6">
+</body>
+</html>
