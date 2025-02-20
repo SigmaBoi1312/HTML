@@ -51,7 +51,7 @@ video, img {
     width: 100%;
     background-color: #333;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     padding: 10px 20px;
     z-index: 1000;
     align-items: center;
@@ -92,6 +92,9 @@ video, img {
 
 /* Mobile styles */
 @media screen and (max-width: 768px) {
+    .navbar {
+        justify-content: space-between;
+    }
     .navbar .menu {
         display: none;
         flex-direction: column;
