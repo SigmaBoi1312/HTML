@@ -216,13 +216,15 @@ for (let i = 0; i < coll.length; i++) {
     this.classList.toggle("active");
     var content = this.nextElementSibling;
 
-    if (content.style.maxHeight) {
-      content.style.maxHeight = null; // Collapse if already expanded
+    if (content.style.display === "block") {
+      content.style.display = "none"; // Collapse it
     } else {
-      content.style.maxHeight = content.scrollHeight + "px"; // Expand fully
+      content.style.display = "block"; // Expand it
+      content.style.maxHeight = content.scrollHeight + "px"; // Auto-expand to fit images
     }
   });
-}
+});
+
 </script>
 </body>
 </html>
