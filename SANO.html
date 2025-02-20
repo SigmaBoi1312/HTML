@@ -1,242 +1,165 @@
-<html> <head>
-<style>
-/* Global Styles */
-html, body {
-    height: 100%;
-    margin: 0;
-    overflow-y: auto; /* Allow vertical scrolling */
-    background-color: #111; /* Optional: Dark background */
-}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery</title>
+    <style>
+        /* General Page Styling */
+        html, body {
+            margin: 0;
+            padding: 0;
+            background-color: #111;
+            color: white;
+            font-family: Arial, sans-serif;
+        }
 
-/* Layout */
-body {
-    display: flex;
-    flex-direction: column;
-    gap: 0;
-    padding-bottom: 60px; /* Space for the audio player */
-}
+        /* Navbar */
+        .navbar {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background-color: #333;
+            display: flex;
+            justify-content: space-around;
+            padding: 10px 0;
+            z-index: 1000;
+        }
 
-/* Images */
-img {
-    max-width: 100%;
-    max-height: 100vh; /* Keeps images within the screen */
-    object-fit: contain; /* Ensures the whole image is visible */
-    display: block; /* Avoids extra spacing */
-    margin: auto; /* Centers images */
-}
+        .navbar a {
+            text-decoration: none;
+            color: white;
+            padding: 10px 20px;
+            font-size: 18px;
+        }
 
-/* Video (if needed) */
-video {
-    width: 100%;
-    height: auto;
-    object-fit: contain;
-}
+        .navbar a:hover {
+            background-color: #575757;
+            border-radius: 5px;
+        }
 
-/* Navbar */
-.navbar {
-    position: fixed;
-    top: 0;
-    width: 100%;
-    background-color: #333;
-    display: flex;
-    justify-content: space-around;
-    padding: 10px 0;
-    z-index: 1000;
-}
+        /* Collapsible Sections */
+        .collapsible {
+            background-color: #444;
+            color: white;
+            cursor: pointer;
+            padding: 18px;
+            width: 100%;
+            border: none;
+            text-align: left;
+            font-size: 16px;
+            transition: background-color 0.3s ease;
+        }
 
-.navbar a {
-    text-decoration: none;
-    color: white;
-    padding: 10px 20px;
-    font-size: 18px;
-}
+        .collapsible:hover, .collapsible.active {
+            background-color: #666;
+        }
 
-.navbar a:hover {
-    background-color: #575757;
-    border-radius: 5px;
-}
+        /* Section Content */
+        .content {
+            display: none; /* Hidden by default */
+            padding: 10px;
+            background-color: #222;
+            text-align: center;
+        }
 
-/* Collapsible Buttons */
-.collapsible {
-    background-color: #777;
-    color: white;
-    cursor: pointer;
-    padding: 18px;
-    width: 100%;
-    border: none;
-    text-align: left;
-    outline: none;
-    font-size: 15px;
-    transition: background-color 0.3s ease;
-}
+        /* Images */
+        .content img {
+            width: 90%;  /* Make sure images are visible */
+            max-width: 800px; /* Prevents images from being too large */
+            height: auto; /* Keeps aspect ratio */
+            display: block;
+            margin: 10px auto;
+        }
 
-.active, .collapsible:hover {
-    background-color: #555;
-}
+        /* Audio Players */
+        .audio-container {
+            position: fixed;
+            bottom: 5%;
+            left: 5%;
+            z-index: 9999;
+            display: flex;
+            gap: 20px;
+        }
 
-/* Collapsible Content */
-.content {
-    display: none; /* Hidden by default */
-    overflow: hidden;
-    padding: 10px;
-    background-color: #222; /* Optional: Slightly different bg */
-}
-
-/* Audio Player */
-.Audio1, .Audio2 {
-    position: fixed;
-    bottom: 5%;
-    z-index: 9999;
-    background: white;
-    border: 1px solid black;
-}
-
-.Audio1 {
-    left: 5%;
-}
-
-.Audio2 {
-    left: 65%;
-}
-
-</style>
-<div class="navbar">
-    <a href="https://sigmaboi1312.github.io/HTML/HTML">Hentai</a>
-    <a href="https://sigmaboi1312.github.io/HTML/ADS">Nutaku</a>
-    <a href="https://sigmaboi1312.github.io/HTML/BRECKIE">Breckie Vid</a>
-    <a href="https://sigmaboi1312.github.io/HTML/OLIVIA">Olivia</a>
-    <a href="https://sigmaboi1312.github.io/HTML/PHONE">Breckie Pic</a>
-    <a href="https://sigmaboi1312.github.io/HTML/SANO">Sano-BR</a>
-    <a href="https://sigmaboi1312.github.io/HTML/OTHER">Other</a>
-</div>
-<audio class="Audio1" controls>
-  <source src="voice1.mp3" type="audio/mp3">
-</audio>
-
-<audio class="Audio2" controls>
-  <source src="Voice2.mp3" type="audio/mp3">
-</audio>
+        audio {
+            background: white;
+            border: 1px solid black;
+        }
+    </style>
 </head>
 <body>
-<button type="button" class="collapsible">Bulma, Chi-Chi & 18</button>
-<div class="content">
-    <img src="Bulma_Chi-Chi_18_-__DBZ__Easter_00.jpg">
-    <img src="Bulma_Chi-Chi_18_-__DBZ__Easter_01.jpg">
-    <img src="Bulma_Chi-Chi_18_-__DBZ__Easter_02.jpg">
-    <img src="Bulma_Chi-Chi_18_-__DBZ__Easter_03.jpg">
-    <img src="Bulma_Chi-Chi_18_-__DBZ__Easter_04.jpg">
-    <img src="Bulma_Chi-Chi_18_-__DBZ__Easter_05.jpg">
-    <img src="Bulma_Chi-Chi_18_-__DBZ__Easter_06.jpg">
-    <img src="Bulma_Chi-Chi_18_-__DBZ__Easter_07.jpg">
-    <img src="Bulma_Chi-Chi_18_-__DBZ__Easter_08.jpg">
-    <img src="Bulma_Chi-Chi_18_-__DBZ__Easter_09.jpg">
-    <img src="Bulma_Chi-Chi_18_-__DBZ__Easter_10.jpg">
-    <img src="Bulma_Chi-Chi_18_-__DBZ__Easter_11.jpg">
-    <img src="Bulma_Chi-Chi_18_-__DBZ__Easter_12.jpg">
-</div>
-<button type="button" class="collapsible">Chi-Chi</button>
-<div class="content">
-    <img src="Chi-Chi__DBZ___HNY_2022_Sano_BR_00_1.jpg">
-    <img src="Chi-Chi__DBZ___HNY_2022_Sano_BR_00.jpg">
-    <img src="Chi-Chi__DBZ___HNY_2022_Sano_BR_01.jpg">
-    <img src="Chi-Chi__DBZ___HNY_2022_Sano_BR_02.jpg">
-    <img src="Chi-Chi__DBZ___HNY_2022_Sano_BR_03.jpg">
-    <img src="Chi-Chi__DBZ___HNY_2022_Sano_BR_04.jpg">
-    <img src="Chi-Chi__DBZ___HNY_2022_Sano_BR_05.jpg">
-    <img src="Chi-Chi__DBZ___HNY_2022_Sano_BR_06.jpg">
-    <img src="Chi-Chi__DBZ___HNY_2022_Sano_BR_07.jpg">
-    <img src="Chi-Chi__DBZ___HNY_2022_Sano_BR_08.jpg">
-    <img src="Chi-Chi__DBZ___HNY_2022_Sano_BR_09.jpg">
-    <img src="Chi-Chi__DBZ___HNY_2022_Sano_BR_10.jpg">
-    <img src="Chi-Chi__DBZ___HNY_2022_Sano_BR_11.jpg">
-    <img src="Chi-Chi__DBZ___HNY_2022_Sano_BR_12.jpg">
-    <img src="Chi-Chi__DBZ___HNY_2022_Sano_BR_13.jpg">
-</div>
-<button type="button" class="collapsible">Bulma & Android 18</button>
-<div class="content">
-    <img src="Android_18_Bulma__DBS__Sano_BR_file_00.jpg">
-    <img src="Android_18_Bulma__DBS__Sano_BR_file_01.jpg">
-    <img src="Android_18_Bulma__DBS__Sano_BR_file_02.jpg">
-    <img src="Android_18_Bulma__DBS__Sano_BR_file_03.jpg">
-    <img src="Android_18_Bulma__DBS__Sano_BR_file_04.jpg">
-    <img src="Android_18_Bulma__DBS__Sano_BR_file_05.jpg">
-    <img src="Android_18_Bulma__DBS__Sano_BR_file_06.jpg">
-    <img src="Android_18_Bulma__DBS__Sano_BR_file_07.jpg">
-    <img src="Android_18_Bulma__DBS__Sano_BR_file_08.jpg">
-    <img src="Android_18_Bulma__DBS__Sano_BR_file_09.jpg">
-    <img src="Android_18_Bulma__DBS__Sano_BR_file_10.jpg">
-    <img src="Android_18_Bulma__DBS__Sano_BR_file_11.jpg">
-    <img src="Android_18_Bulma__DBS__Sano_BR_file_12.jpg">
-    <img src="Android_18_Bulma__DBS__Sano_BR_file_13.jpg">
-</div>
-<button type="button" class="collapsible">Momo Yaoyorozu (Cowgirl)</button>
-<div class="content">
-    <img src="Momo_Yaoyorozu_cowgirl__MHA__FILE_0.jpg">
-    <img src="Momo_Yaoyorozu_cowgirl__MHA__FILE_1.jpg">
-    <img src="Momo_Yaoyorozu_cowgirl__MHA__FILE_2.jpg">
-    <img src="Momo_Yaoyorozu_cowgirl__MHA__FILE_3.jpg">
-    <img src="Momo_Yaoyorozu_cowgirl__MHA__FILE_4.jpg">
-    <img src="Momo_Yaoyorozu_cowgirl__MHA__FILE_5.jpg">
-    <img src="Momo_Yaoyorozu_cowgirl__MHA__FILE_6.jpg">
-    <img src="Momo_Yaoyorozu_cowgirl__MHA__FILE_7.jpg">
-    <img src="Momo_Yaoyorozu_cowgirl__MHA__FILE_8.jpg">
-    <img src="Momo_Yaoyorozu_cowgirl__MHA__FILE_9.jpg">
-    <img src="Momo_Yaoyorozu_cowgirl__MHA__FILE_10.jpg">
-    <img src="Momo_Yaoyorozu_cowgirl__MHA__FILE_11.jpg">
-    <img src="Momo_Yaoyorozu_cowgirl__MHA__FILE_12.jpg">
-</div>
-<button type="button" class="collapsible">18 & Chi-Chi</button>
-<div class="content">
-    
-</div>
-<button type="button" class="collapsible">Momo Yaoyorozu (MHA)</button>
-<div class="content">
-    
-</div>
-<button type="button" class="collapsible">Yaoyorozu Momo (MHA) Cheerleader</button>
-<div class="content">
-    
-</div>
-<button type="button" class="collapsible">Midnight & Mt Lady</button>
-<div class="content">
-    
-</div>
-<button type="button" class="collapsible">Chi-Chi - After Party</button>
-<div class="content">
-    
-</div>
-<button type="button" class="collapsible">Future Bulma - A seductive look</button>
-<div class="content">
-    
-</div>
-<button type="button" class="collapsible">Bulma & Chi-Chi</button>
-<div class="content">
-    
-</div>
-<button type="button" class="collapsible">Chi-Chi & Videl</button>
-<div class="content">
-    
-</div>
-<button type="button" class="collapsible">Zelda (SSBU)</button>
-<div class="content">
-    
-</div>
-<script>
-var coll = document.getElementsByClassName("collapsible");
-var i;
 
-for (i = 0; i < coll.length; i++) {
-  coll[i].addEventListener("click", function() {
-    this.classList.toggle("active");
-    var content = this.nextElementSibling;
-    if (content.style.display === "block") {
-      content.style.display = "none";
-    } else {
-      content.style.display = "block";
-    }
-  });
-}
+    <!-- Navigation Bar -->
+    <div class="navbar">
+        <a href="https://sigmaboi1312.github.io/HTML/HTML">Hentai</a>
+        <a href="https://sigmaboi1312.github.io/HTML/ADS">Nutaku</a>
+        <a href="https://sigmaboi1312.github.io/HTML/BRECKIE">Breckie Vid</a>
+        <a href="https://sigmaboi1312.github.io/HTML/OLIVIA">Olivia</a>
+        <a href="https://sigmaboi1312.github.io/HTML/PHONE">Breckie Pic</a>
+        <a href="https://sigmaboi1312.github.io/HTML/SANO">Sano-BR</a>
+        <a href="https://sigmaboi1312.github.io/HTML/OTHER">Other</a>
+    </div>
 
-</script>
+    <!-- Audio Players -->
+    <div class="audio-container">
+        <audio controls>
+            <source src="voice1.mp3" type="audio/mp3">
+        </audio>
+        <audio controls>
+            <source src="Voice2.mp3" type="audio/mp3">
+        </audio>
+    </div>
+
+    <!-- Image Sections -->
+    <button class="collapsible">Bulma, Chi-Chi & 18</button>
+    <div class="content">
+        <img src="Bulma_Chi-Chi_18_-__DBZ__Easter_00.jpg">
+        <img src="Bulma_Chi-Chi_18_-__DBZ__Easter_01.jpg">
+        <img src="Bulma_Chi-Chi_18_-__DBZ__Easter_02.jpg">
+        <img src="Bulma_Chi-Chi_18_-__DBZ__Easter_03.jpg">
+    </div>
+
+    <button class="collapsible">Chi-Chi</button>
+    <div class="content">
+        <img src="Chi-Chi__DBZ___HNY_2022_Sano_BR_00.jpg">
+        <img src="Chi-Chi__DBZ___HNY_2022_Sano_BR_01.jpg">
+        <img src="Chi-Chi__DBZ___HNY_2022_Sano_BR_02.jpg">
+        <img src="Chi-Chi__DBZ___HNY_2022_Sano_BR_03.jpg">
+    </div>
+
+    <button class="collapsible">Bulma & Android 18</button>
+    <div class="content">
+        <img src="Android_18_Bulma__DBS__Sano_BR_file_00.jpg">
+        <img src="Android_18_Bulma__DBS__Sano_BR_file_01.jpg">
+        <img src="Android_18_Bulma__DBS__Sano_BR_file_02.jpg">
+        <img src="Android_18_Bulma__DBS__Sano_BR_file_03.jpg">
+    </div>
+
+    <button class="collapsible">Momo Yaoyorozu (Cowgirl)</button>
+    <div class="content">
+        <img src="Momo_Yaoyorozu_cowgirl__MHA__FILE_0.jpg">
+        <img src="Momo_Yaoyorozu_cowgirl__MHA__FILE_1.jpg">
+        <img src="Momo_Yaoyorozu_cowgirl__MHA__FILE_2.jpg">
+        <img src="Momo_Yaoyorozu_cowgirl__MHA__FILE_3.jpg">
+    </div>
+
+    <!-- Collapsible JavaScript -->
+    <script>
+        var coll = document.getElementsByClassName("collapsible");
+        for (var i = 0; i < coll.length; i++) {
+            coll[i].addEventListener("click", function () {
+                this.classList.toggle("active");
+                var content = this.nextElementSibling;
+                if (content.style.display === "block") {
+                    content.style.display = "none";
+                } else {
+                    content.style.display = "block";
+                }
+            });
+        }
+    </script>
+
 </body>
 </html>
+
