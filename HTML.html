@@ -21,22 +21,18 @@ video, img {
     z-index: 1; /* Ensure it's below the audio */
 }
 
-.Audio1 {
-    position: fixed; /* Stay at a fixed position */
-    bottom: 5%; /* Align at the bottom of the viewport */
-    left: 5%; /* Adjust horizontal position */
-    z-index: 9999; /* Bring above everything else */
-    background: white; /* Add a background to prevent being obscured */
-    border: 1px solid black; /* Optional: For debugging */
+.audio-container {
+    position: fixed;
+    bottom: 5%;
+    left: 5%;
+    z-index: 9999;
+    display: flex;
+    gap: 20px;
 }
 
-.Audio2 {
-    position: fixed; /* Stay at a fixed position */
-    bottom: 5%; /* Align at the bottom of the viewport */
-    left: 65%; /* Adjust horizontal position */
-    z-index: 9999; /* Bring above everything else */
-    background: white; /* Add a background to prevent being obscured */
-    border: 1px solid black; /* Optional: For debugging */
+audio {
+    background: white;
+    border: 1px solid black;
 }
 
 .navbar {
@@ -71,12 +67,14 @@ video, img {
     <a href="https://sigmaboi1312.github.io/HTML/SANO">Sano-BR</a>
     <a href="https://sigmaboi1312.github.io/HTML/OTHER">Other</a>
 </div>
-<audio class="Audio1" controls autoplay>
-  <source src="voice1.mp3" type="audio/MP3">
-</audio>
-<audio class="Audio2" controls autoplay>
-  <source src="Voice2.mp3" type="audio/mp3">
-</audio>
+    <div class="audio-container">
+        <audio controls>
+            <source src="voice1.mp3" type="audio/mp3">
+        </audio>
+        <audio controls>
+            <source src="Voice2.mp3" type="audio/mp3">
+        </audio>
+    </div>
 </head>
 <body>
   <img src="https://cdn.hentaigifz.com/79334/adxadmin-ads-3.gif" alt="AdxAdmin/Ads/3" width="300" height="250" fetchpriority="high" decoding="async">
