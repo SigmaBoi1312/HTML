@@ -1,44 +1,38 @@
 <html> <head>
 <style>
+/* Global Styles */
 html, body {
     height: 100%;
     margin: 0;
     overflow-y: auto; /* Allow vertical scrolling */
+    background-color: #111; /* Optional: Dark background */
 }
 
+/* Layout */
 body {
     display: flex;
-    flex-direction: column; /* Stack content vertically */
+    flex-direction: column;
     gap: 0;
     padding-bottom: 60px; /* Space for the audio player */
 }
 
-video, img {
+/* Images */
+img {
+    max-width: 100%;
+    max-height: 100vh; /* Keeps images within the screen */
+    object-fit: contain; /* Ensures the whole image is visible */
+    display: block; /* Avoids extra spacing */
+    margin: auto; /* Centers images */
+}
+
+/* Video (if needed) */
+video {
     width: 100%;
-    height: auto; /* Maintain aspect ratio */
-    object-fit: cover; /* Ensure content covers the width */
-    position: relative; /* Prevent overlapping stacking context */
-    z-index: 1; /* Ensure it's below the audio */
+    height: auto;
+    object-fit: contain;
 }
 
-.Audio1 {
-    position: fixed; /* Stay at a fixed position */
-    bottom: 5%; /* Align at the bottom of the viewport */
-    left: 5%; /* Adjust horizontal position */
-    z-index: 9999; /* Bring above everything else */
-    background: white; /* Add a background to prevent being obscured */
-    border: 1px solid black; /* Optional: For debugging */
-}
-
-.Audio2 {
-    position: fixed; /* Stay at a fixed position */
-    bottom: 5%; /* Align at the bottom of the viewport */
-    left: 65%; /* Adjust horizontal position */
-    z-index: 9999; /* Bring above everything else */
-    background: white; /* Add a background to prevent being obscured */
-    border: 1px solid black; /* Optional: For debugging */
-}
-
+/* Navbar */
 .navbar {
     position: fixed;
     top: 0;
@@ -47,7 +41,7 @@ video, img {
     display: flex;
     justify-content: space-around;
     padding: 10px 0;
-    z-index: 1000; /* Ensure it stays above all other elements */
+    z-index: 1000;
 }
 
 .navbar a {
@@ -61,29 +55,49 @@ video, img {
     background-color: #575757;
     border-radius: 5px;
 }
+
+/* Collapsible Buttons */
 .collapsible {
-  background-color: #777;
-  color: white;
-  cursor: pointer;
-  padding: 18px;
-  width: 100%;
-  border: none;
-  text-align: left;
-  outline: none;
-  font-size: 15px;
-  transition: background-color 0.3s ease;
+    background-color: #777;
+    color: white;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 15px;
+    transition: background-color 0.3s ease;
 }
-    
+
 .active, .collapsible:hover {
-  background-color: #555;
+    background-color: #555;
 }
 
+/* Collapsible Content */
 .content {
-  display: none; /* Initially hidden */
-  overflow: hidden;
-  transition: max-height 0.3s ease-out;
+    display: none; /* Hidden by default */
+    overflow: hidden;
+    padding: 10px;
+    background-color: #222; /* Optional: Slightly different bg */
 }
 
+/* Audio Player */
+.Audio1, .Audio2 {
+    position: fixed;
+    bottom: 5%;
+    z-index: 9999;
+    background: white;
+    border: 1px solid black;
+}
+
+.Audio1 {
+    left: 5%;
+}
+
+.Audio2 {
+    left: 65%;
+}
 
 </style>
 <div class="navbar">
