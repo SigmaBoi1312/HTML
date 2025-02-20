@@ -78,12 +78,11 @@ video, img {
 }
 
 .content {
-  padding: 0 18px;
-  display: none;
-  overflow: hidden;
-  background-color: #f1f1f1;
-  max-height: 0; /* Start fully collapsed */
-  transition: max-height 0.3s ease-out; /* Smooth transition */
+  width: 100%;
+    height: auto; /* Maintain aspect ratio */
+    object-fit: cover; /* Ensure content covers the width */
+    position: relative; /* Prevent overlapping stacking context */
+    z-index: 1;
 }
 
 </style>
@@ -210,20 +209,19 @@ video, img {
 </div>
 <script>
 var coll = document.getElementsByClassName("collapsible");
+var i;
 
-for (let i = 0; i < coll.length; i++) {
+for (i = 0; i < coll.length; i++) {
   coll[i].addEventListener("click", function() {
     this.classList.toggle("active");
     var content = this.nextElementSibling;
-
     if (content.style.display === "block") {
-      content.style.display = "none"; // Collapse it
+      content.style.display = "none";
     } else {
-      content.style.display = "block"; // Expand it
-      content.style.maxHeight = content.scrollHeight + "px"; // Auto-expand to fit images
+      content.style.display = "block";
     }
   });
-});
+}
 
 </script>
 </body>
