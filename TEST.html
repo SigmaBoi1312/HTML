@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sano-BR</title>
+<style>
+html, body {
+    height: 100%;
+    margin: 0;
+    overflow-y: auto;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    padding-bottom: 60px;
+    padding-top: 50px;
+}
+
+video, img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    position: relative;
+    z-index: 1;
+}
+
+.Audio1 {
+    position: fixed;
+    bottom: 5%;
+    left: 5%;
+    z-index: 9999;
+    background: white;
+    border: 1px solid black;
+}
+
+.Audio2 {
+    position: fixed;
+    bottom: 5%;
+    left: 65%;
+    z-index: 9999;
+    background: white;
+    border: 1px solid black;
+}
+
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: #333;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 20px;
+    z-index: 1000;
+    align-items: center;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: white;
+    padding: 10px 20px;
+    font-size: 18px;
+    display: block;
+}
+
+.navbar a:hover {
+    background-color: #575757;
+    border-radius: 5px;
+}
+
+.navbar .menu {
+    display: flex;
+}
+
+.navbar .menu a {
+    margin: 0 10px;
+}
+
+.navbar .hamburger {
+    display: none;
+    cursor: pointer;
+}
+
+.navbar .hamburger div {
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    margin: 5px 0;
+}
+
+/* Mobile styles */
+@media screen and (max-width: 768px) {
+    .navbar .menu {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background-color: #333;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        padding: 20px 0;
+        z-index: 1001;
+    }
+
+    .navbar .menu a {
+        margin: 10px 0;
+        text-align: center;
+        padding: 10px 0;
+    }
+
+    .navbar .hamburger {
+        display: block;
+    }
+
+    .navbar.active .menu {
+        display: flex;
+    }
+}
+
+.collapsible {
+    background-color: #444;
+    color: white;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    border: none;
+    text-align: left;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+.collapsible:hover, .collapsible.active {
+    background-color: #666;
+}
+
+.content {
+    display: none;
+    padding: 10px;
+    background-color: #222;
+    text-align: center;
+}
+
+.content img {
+    width: 90%;
+    max-width: 800px;
+    height: auto;
+    display: block;
+    margin: 10px auto;
+}
+
+</style>
+</head>
+<body>
+<div class="navbar">
+    <div class="hamburger" onclick="toggleNavbar()">
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+    <div class="menu">
+        <a href="https://sigmaboi1312.github.io/HTML/HTML">Hentai</a>
+        <a href="https://sigmaboi1312.github.io/HTML/ADS">Nutaku</a>
+        <a href="https://sigmaboi1312.github.io/HTML/BRECKIE">Breckie Vid</a>
+        <a href="https://sigmaboi1312.github.io/HTML/OLIVIA">Olivia</a>
+        <a href="https://sigmaboi1312.github.io/HTML/PHONE">Breckie Pic</a>
+        <a href="https://sigmaboi1312.github.io/HTML/SANO">Sano-BR</a>
+        <a href="https://sigmaboi1312.github.io/HTML/OTHER">Other</a>
+    </div>
+</div>
+
+<!-- Your content (audio, buttons, images, etc.) -->
+
+<script>
+var coll = document.getElementsByClassName("collapsible");
+for (var i = 0; i < coll.length; i++) {
+    coll[i].addEventListener("click", function() {
+        this.classList.toggle("active");
+        var content = this.nextElementSibling;
+        if (content.style.display === "block") {
+            content.style.display = "none";
+        } else {
+            content.style.display = "block";
+        }
+    });
+}
+
+function toggleNavbar() {
+    var navbar = document.querySelector('.navbar');
+    navbar.classList.toggle('active');
+}
+</script>
+</body>
+</html>
