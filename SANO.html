@@ -5,103 +5,100 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sano-BR</title>
     <style>
-    /* General Page Styling */
-    html, body {
-        height: 100%;
-        margin: 0;
-        overflow-y: auto; /* Allow vertical scrolling */
-    }
+        html, body {
+            height: 100%;
+            margin: 0;
+            overflow-y: auto; /* Allow vertical scrolling */
+        }
 
-    body {
-        display: flex;
-        flex-direction: column; /* Stack content vertically */
-        gap: 0;
-        padding-bottom: 60px; /* Space for the audio player */
-    }
+        body {
+            display: flex;
+            flex-direction: column; /* Stack content vertically */
+            gap: 0;
+            padding-bottom: 60px; /* Space for the audio player */
+        }
 
-    video, img {
-        width: 100%;
-        height: auto; /* Maintain aspect ratio */
-        object-fit: cover; /* Ensure content covers the width */
-        position: relative; /* Prevent overlapping stacking context */
-        z-index: 1; /* Ensure it's below the audio */
-    }
+        video, img {
+            width: 100%;
+            height: auto; /* Maintain aspect ratio */
+            object-fit: cover; /* Ensure content covers the width */
+            position: relative; /* Prevent overlapping stacking context */
+            z-index: 1; /* Ensure it's below the audio */
+        }    
 
-    /* Audio Players */
-    .Audio1 {
-        position: fixed; /* Stay at a fixed position */
-        bottom: 5%; /* Align at the bottom of the viewport */
-        left: 5%; /* Adjust horizontal position */
-        z-index: 9999; /* Bring above everything else */
-        background: white; /* Add a background to prevent being obscured */
-        border: 1px solid black; /* Optional: For debugging */
-    }
+        .Audio1 {
+            position: fixed; /* Stay at a fixed position */
+            bottom: 5%; /* Align at the bottom of the viewport */
+            left: 5%; /* Adjust horizontal position */
+            z-index: 9999; /* Bring above everything else */
+            background: white; /* Add a background to prevent being obscured */
+            border: 1px solid black; /* Optional: For debugging */
+        }
 
-    .Audio2 {
-        position: fixed; /* Stay at a fixed position */
-        bottom: 5%; /* Align at the bottom of the viewport */
-        left: 65%; /* Adjust horizontal position */
-        z-index: 9999; /* Bring above everything else */
-        background: white; /* Add a background to prevent being obscured */
-        border: 1px solid black; /* Optional: For debugging */
-    }
+        .Audio2 {
+            position: fixed; /* Stay at a fixed position */
+            bottom: 5%; /* Align at the bottom of the viewport */
+            left: 65%; /* Adjust horizontal position */
+            z-index: 9999; /* Bring above everything else */
+            background: white; /* Add a background to prevent being obscured */
+            border: 1px solid black; /* Optional: For debugging */
+        }
 
-    /* Navbar */
-    .navbar {
-        position: fixed;
-        top: 0;
-        width: 100%;
-        background-color: #333;
-        display: flex;
-        justify-content: space-around;
-        padding: 10px 0;
-        z-index: 1000; /* Ensure it stays above all other elements */
-    }
+        .navbar {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background-color: #333;
+            display: flex;
+            justify-content: space-around;
+            padding: 10px 0;
+            z-index: 1000; /* Ensure it stays above all other elements */
+        }
 
-    .navbar a {
-        text-decoration: none;
-        color: white;
-        padding: 10px 20px;
-        font-size: 18px;
-    }
+        .navbar a {
+            text-decoration: none;
+            color: white;
+            padding: 10px 20px;
+            font-size: 18px;
+        }
 
-    .navbar a:hover {
-        background-color: #575757;
-        border-radius: 5px;
-    }
+        .navbar a:hover {
+             background-color: #575757;
+             border-radius: 5px;
+        }
 
-    .collapsible {
-        background-color: #444;
-        color: white;
-        cursor: pointer;
-        padding: 18px;
-        width: 100%;
-        border: none;
-        text-align: left;
-        font-size: 16px;
-        transition: background-color 0.3s ease;
-    }
+        .collapsible {
+            background-color: #444;
+            color: white;
+            cursor: pointer;
+            padding: 18px;
+            width: 100%;
+            border: none;
+            text-align: left;
+            font-size: 16px;
+            transition: background-color 0.3s ease;
+        }
 
-    .collapsible:hover, .collapsible.active {
-        background-color: #666;
-    }
+        .collapsible:hover, .collapsible.active {
+            background-color: #666;
+        }
 
-    .content {
-        display: none;
-        padding: 10px;
-        background-color: #222;
-        text-align: center;
-    }
+        .content {
+            display: none;
+            padding: 10px;
+            background-color: #222;
+            text-align: center;
+        }
 
-    .content img {
-        width: 90%; 
-        max-width: 800px; 
-        height: auto; 
-        display: block;
-        margin: 10px auto;
-    }
+        .content img {
+            width: 90%; 
+            max-width: 800px; 
+            height: auto; 
+            display: block;
+            margin: 10px auto;
+        }
 
-</style>
+    </style>
 
     <!-- Navigation Bar -->
     <div class="navbar">
