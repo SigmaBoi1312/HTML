@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Popup Videos</title>
+    <style>
+html, body {
+    height: 100%;
+    margin: 0;
+    overflow-y: auto; /* Allow vertical scrolling */
+}
+
+body {
+    display: flex;
+    flex-direction: column; /* Stack content vertically */
+    gap: 0;
+    padding-bottom: 60px; /* Space for the audio player */
+}
+
+video, img {
+    width: 100%;
+    height: auto; /* Maintain aspect ratio */
+    object-fit: cover; /* Ensure content covers the width */
+    position: relative; /* Prevent overlapping stacking context */
+    z-index: 1; /* Ensure it's below the audio */
+}
+
+.Audio1 {
+    position: fixed; /* Stay at a fixed position */
+    bottom: 5%; /* Align at the bottom of the viewport */
+    left: 5%; /* Adjust horizontal position */
+    z-index: 9999; /* Bring above everything else */
+    background: white; /* Add a background to prevent being obscured */
+    border: 1px solid black; /* Optional: For debugging */
+}
+
+.Audio2 {
+    position: fixed; /* Stay at a fixed position */
+    bottom: 5%; /* Align at the bottom of the viewport */
+    left: 65%; /* Adjust horizontal position */
+    z-index: 9999; /* Bring above everything else */
+    background: white; /* Add a background to prevent being obscured */
+    border: 1px solid black; /* Optional: For debugging */
+}
+
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: #333;
+    display: flex;
+    justify-content: space-around;
+    padding: 10px 0;
+    z-index: 1000; /* Ensure it stays above all other elements */
+}
+
+.navbar a {
+    text-decoration: none;
+    color: white;
+    padding: 10px 20px;
+    font-size: 18px;
+}
+
+.navbar a:hover {
+    background-color: #575757;
+    border-radius: 5px;
+}
+        .video_wrapper {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: rgba(0, 0, 0, 0.8);
+            padding: 20px;
+            border-radius: 10px;
+            display: none;
+        }
+        video {
+            width: 100%;
+            max-width: 600px;
+        }
+        .controls {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 10px;
+        }
+        button {
+            padding: 10px;
+            cursor: pointer;
+        }
+    </style>
+<div class="navbar">
+    <a href="https://sigmaboi1312.github.io/HTML/HTML">Hentai</a>
+    <a href="https://sigmaboi1312.github.io/HTML/ADS">Nutaku</a>
+    <a href="https://sigmaboi1312.github.io/HTML/BRECKIE">Breckie Vid</a>
+    <a href="https://sigmaboi1312.github.io/HTML/OLIVIA">Olivia</a>
+    <a href="https://sigmaboi1312.github.io/HTML/PHONE">Breckie Pic</a>
+    <a href="https://sigmaboi1312.github.io/HTML/SANO">Sano-BR</a>
+    <a href="https://sigmaboi1312.github.io/HTML/POP">Pop-Ups</a>
+    <a href="https://sigmaboi1312.github.io/HTML/OTHER">Other</a>
+</div>
+<audio class="Audio1" controls>
+  <source src="voice1.mp3" type="audio/MP3">
+</audio>
+<audio class="Audio2" controls>
+  <source src="Voice2.mp3" type="audio/mp3">
+</audio>
+</head>
+<body>
+    <button onclick="openPopup('video1')">Open Video 1</button>
+    <button onclick="openPopup('video2')">Open Video 2</button>
+    <button onclick="openPopup('video3')">Open Video 3</button>
+    <button onclick="openPopup('video4')">Open Video 4</button>
+    <button onclick="openPopup('video5')">Open Video 5</button>
+    <button onclick="openPopup('video6')">Open Video 6</button>
+    <button onclick="openPopup('video7')">Open Video 7</button>
+    <button onclick="openPopup('video8')">Open Video 8</button>
+    <button onclick="openPopup('video9')">Open Video 9</button>
+    <button onclick="openPopup('video10')">Open Video 10</button>
+    <button onclick="openPopup('video11')">Open Video 11</button>
+    <button onclick="openPopup('video12')">Open Video 12</button>
+    <button onclick="openPopup('video13')">Open Video 13</button>
+    <button onclick="openPopup('video14')">Open Video 14</button>
+    <button onclick="openPopup('video15')">Open Video 15</button>
+    <button onclick="openPopup('video16')">Open Video 16</button>
+    <button onclick="openPopup('video17')">Open Video 17</button>
+    <button onclick="openPopup('video18')">Open Video 18</button>
+    <button onclick="openPopup('video19')">Open Video 19</button>
+    <button onclick="openPopup('video20')">Open Video 20</button>
+    <button onclick="openPopup('video21')">Open Video 21</button>
+    <button onclick="openPopup('video22')">Open Video 22</button>
+    <button onclick="openPopup('video23')">Open Video 23</button>
+    <button onclick="openPopup('video24')">Open Video 24</button>
+    <button onclick="openPopup('video25')">Open Video 25</button>
+    <button onclick="openPopup('video26')">Open Video 26</button>
+    <button onclick="openPopup('video27')">Open Video 27</button>
+    <button onclick="openPopup('video28')">Open Video 28</button>
+    <button onclick="openPopup('video29')">Open Video 29</button>
+    <button onclick="openPopup('video30')">Open Video 30</button>
+    <button onclick="openPopup('video31')">Open Video 31</button>
+
+    <div class="video_wrapper" id="video1_wrapper">
+        <video id="video1" muted playsinline webkit-playsinline>
+            <source src="https://u3y8v8u4.aucdn.net/library/461665/cfdc203c1de891f8441d8845e8a00338a4445a38.mp4" type="video/mp4">
+        </video>
+        <div class="controls">
+            <button onclick="toggleMute('video1')">Mute/Unmute</button>
+            <button onclick="replayVideo('video1')">Replay</button>
+            <button onclick="closePopup('video1')">Close</button>
+        </div>
+    </div>
+
+    <div class="video_wrapper" id="video2_wrapper">
+        <video id="video2" muted playsinline webkit-playsinline>
+            <source src="https://htl-cdn.adtng.com/a7/creatives/39/1597/818640/1098724/1098724_video_with_sound.mp4" type="video/mp4">
+        </video>
+        <div class="controls">
+            <button onclick="toggleMute('video2')">Mute/Unmute</button>
+            <button onclick="replayVideo('video2')">Replay</button>
+            <button onclick="closePopup('video2')">Close</button>
+        </div>
+    </div>
+
+    <div class="video_wrapper" id="video3_wrapper">
+        <video id="video3" muted playsinline webkit-playsinline>
+            <source src="https://htl-cdn.adtng.com/a7/creatives/39/1598/818639/1125632/1125632_video_with_sound.mp4" type="video/mp4">
+        </video>
+        <div class="controls">
+            <button onclick="toggleMute('video3')">Mute/Unmute</button>
+            <button onclick="replayVideo('video3')">Replay</button>
+            <button onclick="closePopup('video3')">Close</button>
+        </div>
+    </div>
+
+    <div class="video_wrapper" id="video4_wrapper">
+        <video id="video4" muted playsinline webkit-playsinline>
+            <source src="https://u3y8v8u4.aucdn.net/library/461665/6e0403c92a835d8699028fe8548d93ee8c372b70.mp4" type="video/mp4">
+        </video>
+        <div class="controls">
+            <button onclick="toggleMute('video4')">Mute/Unmute</button>
+            <button onclick="replayVideo('video4')">Replay</button>
+            <button onclick="closePopup('video4')">Close</button>
+        </div>
+    </div>
+
+    <div class="video_wrapper" id="video5_wrapper">
+        <video id="video5" muted playsinline webkit-playsinline>
+            <source src="https://htl-cdn.adtng.com/a7/creatives/39/1597/818640/1115344/1115344_video_with_sound.mp4" type="video/mp4">
+        </video>
+        <div class="controls">
+            <button onclick="toggleMute('video5')">Mute/Unmute</button>
+            <button onclick="replayVideo('video5')">Replay</button>
+            <button onclick="closePopup('video5')">Close</button>
+        </div>
+    </div>
+
+    <div class="video_wrapper" id="video6_wrapper">
+        <video id="video6" muted playsinline webkit-playsinline>
+            <source src="https://htl-cdn.adtng.com/a7/creatives/39/1562/816853/1075622/1075622_video_with_sound.mp4" type="video/mp4">
+        </video>
+        <div class="controls">
+            <button onclick="toggleMute('video6')">Mute/Unmute</button>
+            <button onclick="replayVideo('video6')">Replay</button>
+            <button onclick="closePopup('video6')">Close</button>
+        </div>
+    </div>
+
+    <div class="video_wrapper" id="video7_wrapper">
+        <video id="video7" muted playsinline webkit-playsinline>
+            <source src="https://u3y8v8u4.aucdn.net/library/886962/2b13a02284f6e682def00be447fe1988cc5fba6c.mp4" type="video/mp4">
+        </video>
+        <div class="controls">
+            <button onclick="toggleMute('video7')">Mute/Unmute</button>
+            <button onclick="replayVideo('video7')">Replay</button>
+            <button onclick="closePopup('video7')">Close</button>
+        </div>
+    </div>
+
+    <div class="video_wrapper" id="video8_wrapper">
+        <video id="video8" muted playsinline webkit-playsinline>
+            <source src="https://htl-cdn.adtng.com/a7/creatives/39/1393/804105/1040273/1040273_video_with_sound.mp4" type="video/mp4">
+        </video>
+        <div class="controls">
+            <button onclick="toggleMute('video8')">Mute/Unmute</button>
+            <button onclick="replayVideo('video8')">Replay</button>
+            <button onclick="closePopup('video8')">Close</button>
+        </div>
+    </div>
+    <div class="video_wrapper" id="video9_wrapper">
+        <video id="video9" muted playsinline webkit-playsinline>
+            <source src="https://u3y8v8u4.aucdn.net/library/886962/a40119a7b44cdc1c1a2fce7e9adbf8f1f8e6ddcf.mp4" type="video/mp4">
+        </video>
+        <div class="controls">
+            <button onclick="toggleMute('video9')">Mute/Unmute</button>
+            <button onclick="replayVideo('video9')">Replay</button>
+            <button onclick="closePopup('video9')">Close</button>
+        </div>
+    </div>
+    <div class="video_wrapper" id="video10_wrapper">
+        <video id="video10" muted playsinline webkit-playsinline>
+            <source src="https://htl-cdn.adtng.com/a7/creatives/39/1605/819782/1110871/1110871_video_with_sound.mp4" type="video/mp4">
+        </video>
+        <div class="controls">
+            <button onclick="toggleMute('video10')">Mute/Unmute</button>
+            <button onclick="replayVideo('video10')">Replay</button>
+            <button onclick="closePopup('video10')">Close</button>
+        </div>
+    </div>
+    <div class="video_wrapper" id="video11_wrapper">
+        <video id="video11" muted playsinline webkit-playsinline>
+            <source src="https://htl-cdn.adtng.com/a7/creatives/39/1597/818640/1111958/1111958_video_with_sound.mp4" type="video/mp4">
+        </video>
+        <div class="controls">
+            <button onclick="toggleMute('video11')">Mute/Unmute</button>
+            <button onclick="replayVideo('video11')">Replay</button>
+            <button onclick="closePopup('video11')">Close</button>
+        </div>
+    </div>
+    <div class="video_wrapper" id="video12_wrapper">
+        <video id="video12" muted playsinline webkit-playsinline>
+            <source src="https://htl-cdn.adtng.com/a7/creatives/39/1562/816853/1084749/1084749_video_with_sound.mp4" type="video/mp4">
+        </video>
+        <div class="controls">
+            <button onclick="toggleMute('video12')">Mute/Unmute</button>
+            <button onclick="replayVideo('video12')">Replay</button>
+            <button onclick="closePopup('video12')">Close</button>
+        </div>
+    </div>
+    <div class="video_wrapper" id="video13_wrapper">
+        <video id="video13" muted playsinline webkit-playsinline>
+            <source src="https://htl-cdn.adtng.com/a7/creatives/39/1615/821638/1136250/1136250_video_with_sound.mp4" type="video/mp4">
+        </video>
+        <div class="controls">
+            <button onclick="toggleMute('video13')">Mute/Unmute</button>
+            <button onclick="replayVideo('video13')">Replay</button>
+            <button onclick="closePopup('video13')">Close</button>
+        </div>
+    </div>
+    <div class="video_wrapper" id="video14_wrapper">
+        <video id="video14" muted playsinline webkit-playsinline>
+            <source src="https://htl-cdn.adtng.com/a7/creatives/39/1597/818640/1096225/1096225_video_with_sound.mp4" type="video/mp4">
+        </video>
+        <div class="controls">
+            <button onclick="toggleMute('video14')">Mute/Unmute</button>
+            <button onclick="replayVideo('video14')">Replay</button>
+            <button onclick="closePopup('video14')">Close</button>
+        </div>
+    </div>
+    <div class="video_wrapper" id="video15_wrapper">
+        <video id="video15" muted playsinline webkit-playsinline>
+            <source src="https://u3y8v8u4.aucdn.net/library/886962/a420d7961fd750fbc46853ff94e181d5e924e4a3.mp4" type="video/mp4">
+        </video>
+        <div class="controls">
+            <button onclick="toggleMute('video15')">Mute/Unmute</button>
+            <button onclick="replayVideo('video15')">Replay</button>
+            <button onclick="closePopup('video15')">Close</button>
+        </div>
+    </div>
+    <div class="video_wrapper" id="video16_wrapper">
+        <video id="video16" muted playsinline webkit-playsinline>
+            <source src="https://u3y8v8u4.aucdn.net/library/886962/684eb4ac4ce182f727193caa200c355924ebe134.mp4" type="video/mp4">
+        </video>
+        <div class="controls">
+            <button onclick="toggleMute('video16')">Mute/Unmute</button>
+            <button onclick="replayVideo('video16')">Replay</button>
+            <button onclick="closePopup('video16')">Close</button>
+        </div>
+    </div>
+    <div class="video_wrapper" id="video17_wrapper">
+        <video id="video17" muted playsinline webkit-playsinline>
+            <source src="https://htl-cdn.adtng.com/a7/creatives/39/1597/818640/1105675/1105675_video_with_sound.mp4" type="video/mp4">
+        </video>
+        <div class="controls">
+            <button onclick="toggleMute('video17')">Mute/Unmute</button>
+            <button onclick="replayVideo('video17')">Replay</button>
+            <button onclick="closePopup('video17')">Close</button>
+        </div>
+    </div>
+    <div class="video_wrapper" id="video18_wrapper">
+        <video id="video18" muted playsinline webkit-playsinline>
+            <source src="https://htl-cdn.adtng.com/a7/creatives/39/617/800579/1134369/1134369_video_with_sound.mp4" type="video/mp4">
+        </video>
+        <div class="controls">
+            <button onclick="toggleMute('video18')">Mute/Unmute</button>
+            <button onclick="replayVideo('video18')">Replay</button>
+            <button onclick="closePopup('video18')">Close</button>
+        </div>
+    </div>
+    <div class="video_wrapper" id="video19_wrapper">
+        <video id="video19" muted playsinline webkit-playsinline>
+            <source src="https://htl-cdn.adtng.com/a7/creatives/39/1393/804105/1092469/1092469_video_with_sound.mp4" type="video/mp4">
+        </video>
+        <div class="controls">
+            <button onclick="toggleMute('video19')">Mute/Unmute</button>
+            <button onclick="replayVideo('video19')">Replay</button>
+            <button onclick="closePopup('video19')">Close</button>
+        </div>
+    </div>
+    
+    <div class="video_wrapper" id="video20_wrapper">
+        <video id="video20" muted playsinline webkit-playsinline>
+            <source src="https://htl-cdn.adtng.com/a7/creatives/39/1393/804105/1106676/1106676_video_with_sound.mp4" type="video/mp4">
+        </video>
+        <div class="controls">
+            <button onclick="toggleMute('video20')">Mute/Unmute</button>
+            <button onclick="replayVideo('video20')">Replay</button>
+            <button onclick="closePopup('video20')">Close</button>
+        </div>
+    </div>
+    
+    <div class="video_wrapper" id="video21_wrapper">
+        <video id="video21" muted playsinline webkit-playsinline>
+            <source src="https://htl-cdn.adtng.com/a7/creatives/39/1562/816853/1121040/1121040_video_with_sound.mp4" type="video/mp4">
+        </video>
+        <div class="controls">
+            <button onclick="toggleMute('video21')">Mute/Unmute</button>
+            <button onclick="replayVideo('video21')">Replay</button>
+            <button onclick="closePopup('video21')">Close</button>
+        </div>
+    </div>
+    
+    <div class="video_wrapper" id="video22_wrapper">
+        <video id="video22" muted playsinline webkit-playsinline>
+            <source src="https://htl-cdn.adtng.com/a7/creatives/39/1597/818640/1116981/1116981_video_with_sound.mp4" type="video/mp4">
+        </video>
+        <div class="controls">
+            <button onclick="toggleMute('video22')">Mute/Unmute</button>
+            <button onclick="replayVideo('video22')">Replay</button>
+            <button onclick="closePopup('video22')">Close</button>
+        </div>
+    </div>
+    
+    <div class="video_wrapper" id="video23_wrapper">
+        <video id="video23" muted playsinline webkit-playsinline>
+            <source src="https://htl-cdn.adtng.com/a7/creatives/39/1597/818640/1103448/1103448_video_with_sound.mp4" type="video/mp4">
+        </video>
+        <div class="controls">
+            <button onclick="toggleMute('video23')">Mute/Unmute</button>
+            <button onclick="replayVideo('video23')">Replay</button>
+            <button onclick="closePopup('video23')">Close</button>
+        </div>
+    </div>
+    <div class="video_wrapper" id="video24_wrapper">
+        <video id="video24" muted playsinline webkit-playsinline>
+            <source src="https://htl-cdn.adtng.com/a7/creatives/39/1597/818640/1125210/1125210_video_with_sound.mp4" type="video/mp4">
+        </video>
+        <div class="controls">
+            <button onclick="toggleMute('video24')">Mute/Unmute</button>
+            <button onclick="replayVideo('video24')">Replay</button>
+            <button onclick="closePopup('video24')">Close</button>
+        </div>
+    </div>
+    <div class="video_wrapper" id="video25_wrapper">
+        <video id="video25" muted playsinline webkit-playsinline>
+            <source src="https://u3y8v8u4.aucdn.net/library/886962/2f63acb42d941dcbd47e1414ef97dac53941cf2a.mp4" type="video/mp4">
+        </video>
+        <div class="controls">
+            <button onclick="toggleMute('video25')">Mute/Unmute</button>
+            <button onclick="replayVideo('video25')">Replay</button>
+            <button onclick="closePopup('video25')">Close</button>
+        </div>
+    </div>
+    <div class="video_wrapper" id="video26_wrapper">
+        <video id="video26" muted playsinline webkit-playsinline>
+            <source src="https://u3y8v8u4.aucdn.net/library/886962/d91a6517d729e61e8dc1c50b9e714e68085b5c27.mp4" type="video/mp4">
+        </video>
+        <div class="controls">
+            <button onclick="toggleMute('video26')">Mute/Unmute</button>
+            <button onclick="replayVideo('video26')">Replay</button>
+            <button onclick="closePopup('video26')">Close</button>
+        </div>
+    </div>
+    <div class="video_wrapper" id="video27_wrapper">
+        <video id="video27" muted playsinline webkit-playsinline>
+            <source src="https://htl-cdn.adtng.com/a7/creatives/39/1597/818640/1127068/1127068_video_with_sound.mp4" type="video/mp4">
+        </video>
+        <div class="controls">
+            <button onclick="toggleMute('video27')">Mute/Unmute</button>
+            <button onclick="replayVideo('video27')">Replay</button>
+            <button onclick="closePopup('video27')">Close</button>
+        </div>
+    </div>
+    <div class="video_wrapper" id="video28_wrapper">
+        <video id="video28" muted playsinline webkit-playsinline>
+            <source src="https://htl-cdn.adtng.com/a7/creatives/39/1597/818640/1114019/1114019_video_with_sound.mp4" type="video/mp4">
+        </video>
+        <div class="controls">
+            <button onclick="toggleMute('video28')">Mute/Unmute</button>
+            <button onclick="replayVideo('video28')">Replay</button>
+            <button onclick="closePopup('video28')">Close</button>
+        </div>
+    </div>
+    <div class="video_wrapper" id="video29_wrapper">
+        <video id="video29" muted playsinline webkit-playsinline>
+            <source src="https://htl-cdn.adtng.com/a7/creatives/39/1393/804105/1050482/1050482_video_with_sound.mp4" type="video/mp4">
+        </video>
+        <div class="controls">
+            <button onclick="toggleMute('video29')">Mute/Unmute</button>
+            <button onclick="replayVideo('video29')">Replay</button>
+            <button onclick="closePopup('video29')">Close</button>
+        </div>
+    </div>
+    <div class="video_wrapper" id="video30_wrapper">
+        <video id="video30" muted playsinline webkit-playsinline>
+            <source src="https://htl-cdn.adtng.com/a7/creatives/39/1562/816853/1106253/1106253_video_with_sound.mp4" type="video/mp4">
+        </video>
+        <div class="controls">
+            <button onclick="toggleMute('video30')">Mute/Unmute</button>
+            <button onclick="replayVideo('video30')">Replay</button>
+            <button onclick="closePopup('video30')">Close</button>
+        </div>
+    </div>
+    <div class="video_wrapper" id="video31_wrapper">
+        <video id="video31" muted playsinline webkit-playsinline>
+            <source src="https://htl-cdn.adtng.com/a7/creatives/39/1597/818640/1113361/1113361_video_with_sound.mp4" type="video/mp4">
+        </video>
+        <div class="controls">
+            <button onclick="toggleMute('video31')">Mute/Unmute</button>
+            <button onclick="replayVideo('video31')">Replay</button>
+            <button onclick="closePopup('video31')">Close</button>
+        </div>
+    </div>
+    <script>
+        function openPopup(videoId) {
+            // Hide all video wrappers
+            const allWrappers = document.querySelectorAll('.video_wrapper');
+            allWrappers.forEach(wrapper => wrapper.style.display = 'none');
+            
+            // Show the specific video
+            const videoWrapper = document.getElementById(videoId + '_wrapper');
+            videoWrapper.style.display = 'block';
+            const videoElement = document.getElementById(videoId);
+            videoElement.play();  // Play the video when it opens
+        }
+
+        function closePopup(videoId) {
+            const videoWrapper = document.getElementById(videoId + '_wrapper');
+            videoWrapper.style.display = 'none';
+            const videoElement = document.getElementById(videoId);
+            videoElement.pause();  // Pause the video when it closes
+            videoElement.currentTime = 0;  // Reset video to start
+        }
+
+        function toggleMute(videoId) {
+            const videoElement = document.getElementById(videoId);
+            videoElement.muted = !videoElement.muted;  // Toggle mute
+        }
+
+        function replayVideo(videoId) {
+            const videoElement = document.getElementById(videoId);
+            videoElement.currentTime = 0;  // Reset video to start
+            videoElement.play();  // Play the video again
+        }
+    </script>
+</body>
+</html>
