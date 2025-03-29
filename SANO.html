@@ -27,22 +27,20 @@ video, img {
     z-index: 1;
 }
 
-.Audio1 {
+.Audio1, .Audio2 {
     position: fixed;
     bottom: 5%;
-    left: 5%;
     z-index: 9999;
     background: white;
     border: 1px solid black;
 }
 
+.Audio1 {
+    left: 5%;
+}
+
 .Audio2 {
-    position: fixed;
-    bottom: 5%;
-    left: 65%;
-    z-index: 9999;
-    background: white;
-    border: 1px solid black;
+    left: 65%; /* Adjust this value as needed to move the second audio control */
 }
 
 .navbar {
@@ -122,23 +120,6 @@ video, img {
     .navbar.active .menu {
         display: flex;
     }
-    .Audio1 {
-        position: fixed;
-        bottom: 1%;
-        left: 10%;
-        z-index: 9999;
-        background: white;
-        border: 1px solid black;
-    }
-
-    .Audio2 {
-        position: fixed;
-        bottom: 8%;
-        left: 10%;
-        z-index: 9999;
-        background: white;
-        border: 1px solid black;
-    }
 }
 
 .collapsible {
@@ -182,14 +163,14 @@ video, img {
         <div></div>
     </div>
     <div class="menu">
-    <a href="https://sigmaboi1312.github.io/HTML/HTML">Hentai</a>
-    <a href="https://sigmaboi1312.github.io/HTML/ADS">Nutaku</a>
-    <a href="https://sigmaboi1312.github.io/HTML/BRECKIE">Breckie Vid</a>
-    <a href="https://sigmaboi1312.github.io/HTML/OLIVIA">Olivia</a>
-    <a href="https://sigmaboi1312.github.io/HTML/PHONE">Breckie Pic</a>
-    <a href="https://sigmaboi1312.github.io/HTML/SANO">Sano-BR</a>
-    <a href="https://sigmaboi1312.github.io/HTML/POP">Pop-Ups</a>
-    <a href="https://sigmaboi1312.github.io/HTML/OTHER">Other</a>
+        <a href="https://sigmaboi1312.github.io/HTML/HTML">Hentai</a>
+        <a href="https://sigmaboi1312.github.io/HTML/ADS">Nutaku</a>
+        <a href="https://sigmaboi1312.github.io/HTML/BRECKIE">Breckie Vid</a>
+        <a href="https://sigmaboi1312.github.io/HTML/OLIVIA">Olivia</a>
+        <a href="https://sigmaboi1312.github.io/HTML/PHONE">Breckie Pic</a>
+        <a href="https://sigmaboi1312.github.io/HTML/SANO">Sano-BR</a>
+        <a href="https://sigmaboi1312.github.io/HTML/OTHER">Other</a>
+    </div>
 </div>
 
 <audio class="Audio1" controls>
@@ -961,6 +942,14 @@ video, img {
     <img src="Bachira/520.jpg">
     <img src="Bachira/521.jpg">
 </div>
+<button onclick="downloadRepo()">Download Repo</button>
+
+<script>
+function downloadRepo() {
+    window.location.href = "https://github.com/YOUR_USERNAME/YOUR_REPOSITORY/archive/refs/heads/main.zip";
+}
+</script>
+    
 <script>
 var coll = document.getElementsByClassName("collapsible");
 for (var i = 0; i < coll.length; i++) {
