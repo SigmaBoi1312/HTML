@@ -46,8 +46,9 @@ video, img {
     background-color: #333;
     display: flex;
     justify-content: space-around;
-    padding: 10px 0;
-    z-index: 1000; /* Ensure it stays above all other elements */
+    padding: 10px 20px;
+    z-index: 1000;
+    align-items: center;
 }
 
 .navbar a {
@@ -55,22 +56,86 @@ video, img {
     color: white;
     padding: 10px 20px;
     font-size: 18px;
+    display: block;
 }
 
 .navbar a:hover {
     background-color: #575757;
     border-radius: 5px;
 }
+
+.navbar .menu {
+    display: flex;
+    width: 93%; /* Make the menu take full width */
+    justify-content: space-between; /* Spread items out across the width */
+}
+
+.navbar .menu a {
+    margin: 0 10px;
+}
+
+.navbar .hamburger {
+    display: none;
+    cursor: pointer;
+}
+
+.navbar .hamburger div {
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    margin: 5px 0;
+}
+
+/* Mobile styles */
+@media screen and (max-width: 768px) {
+    .navbar {
+        justify-content: space-between;
+    }
+    .navbar .menu {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background-color: #333;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        padding: 20px 0;
+        z-index: 1001;
+    }
+
+    .navbar .menu a {
+        margin: 10px 0;
+        text-align: center;
+        padding: 10px 0;
+    }
+
+    .navbar .hamburger {
+        display: block;
+    }
+
+    .navbar.active .menu {
+        display: flex;
+    }
+}
+
 </style>
 <div class="navbar">
-    <a href="https://sigmaboi1312.github.io/HTML/HTML">Hentai</a>
-    <a href="https://sigmaboi1312.github.io/HTML/ADS">Nutaku</a>
-    <a href="https://sigmaboi1312.github.io/HTML/BRECKIE">Breckie Vid</a>
-    <a href="https://sigmaboi1312.github.io/HTML/OLIVIA">Olivia</a>
-    <a href="https://sigmaboi1312.github.io/HTML/PHONE">Breckie Pic</a>
-    <a href="https://sigmaboi1312.github.io/HTML/SANO">Sano-BR</a>
-    <a href="https://sigmaboi1312.github.io/HTML/POP">Pop-Ups</a>
-    <a href="https://sigmaboi1312.github.io/HTML/OTHER">Other</a>
+    <div class="hamburger" onclick="toggleNavbar()">
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+    <div class="menu">
+        <a href="https://sigmaboi1312.github.io/HTML/HTML">Hentai</a>
+        <a href="https://sigmaboi1312.github.io/HTML/ADS">Nutaku</a>
+        <a href="https://sigmaboi1312.github.io/HTML/BRECKIE">Breckie Vid</a>
+        <a href="https://sigmaboi1312.github.io/HTML/OLIVIA">Olivia</a>
+        <a href="https://sigmaboi1312.github.io/HTML/PHONE">Breckie Pic</a>
+        <a href="https://sigmaboi1312.github.io/HTML/SANO">Sano-BR</a>
+        <a href="https://sigmaboi1312.github.io/HTML/HANIME">Hanime</a>
+        <a href="https://sigmaboi1312.github.io/HTML/POP">Pop-ups</a>
+        <a href="https://sigmaboi1312.github.io/HTML/OTHER">Other</a>
+    </div>
 </div>
 <audio class="Audio1" controls>
   <source src="voice1.mp3" type="audio/MP3">
@@ -148,5 +213,11 @@ video, img {
 <img src="work_1733159238.552.png">
 <img src="work_1733159727.966.png">
 <img src="work_1733159785.62.png">
+<script>
+function toggleNavbar() {
+    var navbar = document.querySelector('.navbar');
+    navbar.classList.toggle('active');
+}
+</script>
 </body>
 </html>
