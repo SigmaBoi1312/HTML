@@ -62,16 +62,241 @@ video, img {
     border-radius: 5px;
 }
 </style>
+<html> <head>
+<style>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>!HENTAI!</title>
+<style>
+html, body {
+    height: 100%;
+    margin: 0;
+    overflow-y: auto;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    padding-bottom: 60px;
+    padding-top: 50px;
+}
+
+video, img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    position: relative;
+    z-index: 1;
+}
+
+.Audio1, .Audio2 {
+    position: fixed;
+    bottom: 5%;
+    z-index: 9999;
+    background: white;
+    border: 1px solid black;
+}
+
+.Audio1 {
+    left: 5%;
+}
+
+.Audio2 {
+    left: 65%; /* Adjust this value as needed to move the second audio control */
+}
+
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: #333;
+    display: flex;
+    justify-content: space-around;
+    padding: 10px 20px;
+    z-index: 1000;
+    align-items: center;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: white;
+    padding: 10px 20px;
+    font-size: 18px;
+    display: block;
+}
+
+.navbar a:hover {
+    background-color: #575757;
+    border-radius: 5px;
+}
+
+.navbar .menu {
+    display: flex;
+    width: 93%; /* Make the menu take full width */
+    justify-content: space-between; /* Spread items out across the width */
+}
+
+.navbar .menu a {
+    margin: 0 10px;
+}
+
+.navbar .hamburger {
+    display: none;
+    cursor: pointer;
+}
+
+.navbar .hamburger div {
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    margin: 5px 0;
+}
+
+/* Mobile styles */
+@media screen and (max-width: 768px) {
+    .navbar {
+        justify-content: space-between;
+    }
+    .navbar .menu {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background-color: #333;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        padding: 20px 0;
+        z-index: 1001;
+    }
+
+    .navbar .menu a {
+        margin: 10px 0;
+        text-align: center;
+        padding: 10px 0;
+    }
+
+    .navbar .hamburger {
+        display: block;
+    }
+
+    .navbar.active .menu {
+        display: flex;
+    }
+}
+
+.collapsible {
+    background-color: #444;
+    color: white;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    border: none;
+    text-align: left;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+.collapsible:hover, .collapsible.active {
+    background-color: #666;
+}
+
+.content {
+    display: none;
+    padding: 10px;
+    background-color: #222;
+    text-align: center;
+}
+
+.content img {
+    width: 90%;
+    max-width: 800px;
+    height: auto;
+    display: block;
+    margin: 10px auto;
+}
+.button {
+  border-radius: 4px;
+  background-color: #f4511e;
+  border: none;
+  color: #FFFFFF;
+  text-align: center;
+  font-size: 28px;
+  padding: 20px;
+  width: 200px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 5px;
+}
+
+.button span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.button span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.button:hover span {
+  padding-right: 25px;
+}
+
+.button:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+</style>
 <div class="navbar">
-    <a href="https://sigmaboi1312.github.io/HTML/HTML">Hentai</a>
-    <a href="https://sigmaboi1312.github.io/HTML/ADS">Nutaku</a>
-    <a href="https://sigmaboi1312.github.io/HTML/BRECKIE">Breckie Vid</a>
-    <a href="https://sigmaboi1312.github.io/HTML/OLIVIA">Olivia</a>
-    <a href="https://sigmaboi1312.github.io/HTML/PHONE">Breckie Pic</a>
-    <a href="https://sigmaboi1312.github.io/HTML/SANO">Sano-BR</a>
-    <a href="https://sigmaboi1312.github.io/HTML/POP">Pop-Ups</a>
-    <a href="https://sigmaboi1312.github.io/HTML/OTHER">Other</a>
+    <div class="hamburger" onclick="toggleNavbar()">
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+    <div class="menu">
+        <a href="https://sigmaboi1312.github.io/HTML/HTML">Hentai</a>
+        <a href="https://sigmaboi1312.github.io/HTML/ADS">Nutaku</a>
+        <a href="https://sigmaboi1312.github.io/HTML/BRECKIE">Breckie Vid</a>
+        <a href="https://sigmaboi1312.github.io/HTML/OLIVIA">Olivia</a>
+        <a href="https://sigmaboi1312.github.io/HTML/PHONE">Breckie Pic</a>
+        <a href="https://sigmaboi1312.github.io/HTML/SANO">Sano-BR</a>
+        <a href="https://sigmaboi1312.github.io/HTML/HANIME">Hanime</a>
+        <a href="https://sigmaboi1312.github.io/HTML/OTHER">Other</a>
+    </div>
 </div>
+<audio class="Audio1" controls>
+  <source src="voice1.mp3" type="audio/MP3">
+</audio>
+<audio class="Audio2" controls>
+  <source src="Voice2.mp3" type="audio/mp3">
+</audio>
+</head>
+<body>
+<a href="https://mangapark.io/title/90131" target="_blank"><button class="button"><span>Gaki ni Modotte Yarinaoshi!!</span></button></a>
+<iframe src="https://hentaihaven.xxx/wp-content/plugins/player-logic/player.php?data=ak9GdkxJSHBKVkpBTW5BV2RGcWphcHJkMjMvT01JL1FhSm45Q3ArYTNOY1lJZkRidEJkN3REVkF5YnA5TUJWTUdXb3VJMDZhNEMwczE2SlB1QWF4MlhyTTI0SndtSlJFZGVFRWpUSlUxWGs0U3VEMHM0dUZWKzJaT1d5TzVZWU9wM21CQkZ1MzNPSzFHRHZFdnhtclJlR2N4blZjMXVkMDN6SmFXdU1BVmlIY0lQWnVnU0IxbHN0djBiZzY2eExLSW9TMGlhWTN6NWEra0d3aXo3MmpMMGJjd2F0Y0U5S0s4b1lsUzlLYXdycU1KdGxhTytPRGxsajlKZ3RMbENiRTp8Ojp8OjZSczhmV05SQkppOUUxOUQxamthNEE9PQ==" frameborder="0" scrolling="no" allowfullscreen=""></iframe>
+<iframe src="https://hentaihaven.xxx/wp-content/plugins/player-logic/player.php?data=NzhZd2dQaitkYUVVTm9FVWpEalJaeWdVbkhOL0plQ3JOTkF6LzloZXUzMXo1UXcyRXJqNU9IT3dHZXNFcmU1ZlZLSUM5TkVwUFRVVTRaZmhldEVFQ3gvOUZTcjQ0ODNRbnRUOUpZSHBodWl4SkNFYlJQRlNaZHdqdTEyaWZMS1pEejh5SlRqVXVRb2U1Nkpwei9UdXJ4TkhwOCtmYUU1cldZMEQrdHZZTTEyOTdnVXc1NVg0WG5GNThETkN2cjNHVEhET2lMaGFBV1NiMGFKU09JZkVtczJsTUd3ajFuWHhPNlFQdkNmZlFCdSsvanFvdWxGUDYrNHlYeEpFUzcybjp8Ojp8OnJ5QjJ1dlh6VXVSNW1zWVVtamhOUHc9PQ==" frameborder="0" scrolling="no" allowfullscreen=""></iframe>
+<iframe src="https://hentaihaven.xxx/wp-content/plugins/player-logic/player.php?data=M0xGb1FiV25ZaWcyUXpJV2tleCtMNlNIQTkvSG9HQTliNWtKM2VzdjZJeDhCV0MxWjJNbFRVV2lYYXVnQmNuVjdCNEJBU1VIejFJRndmSlZkdU5wVWkyWUkyRkpKejQydXBMVVdOdHNxcmtvd1gxTFRoYS93elp0dkZUYUR5QW1nRk1rSElmOUNoV2xWY3RBZG0yYnlvN2ZxRUl0Q0NSRFZwa1I5Ni94M3VxTC91ay85cVdRTWlGV1V2WmgzMlJUbjNkN28yR0lIMW90NFhVNUJUK1BTbGxLQVBCZUpLZ0FOY20zWjRjNVhUdDVXVCtoSmxxbUFrTVJNb3NITW1KYjp8Ojp8OktQVTRmUzdSc3pwZ3piY1pnSXM5WUE9PQ==" frameborder="0" scrolling="no" allowfullscreen=""></iframe>
+<iframe src="https://hentaihaven.xxx/wp-content/plugins/player-logic/player.php?data=QlE3c2tmREF5MnEwdktJRHFoeTNndFF3UnhHUjJEMnY3Sjg3OExmSDVxY0hYM2tycVRkNWtiWXB1azR4U1ZJQmRJNDZzT3JQZng2b1Jndk9FdkgzSDZkbWRkRTBUbGZLcEw0NmtHU3h3QW5rekJTd0lUdVZsU2hydUJhRHVpOUlmSEhibURVRTdZVXE3MEVvS0RVYjJHRDBCV3h0NU9jczhwUnF0aTFZZzNZekVnNE11Mm5UV0NtSHlPTzMzSVJubGZKdGhSblNoZ2t4T0ZGYjR1bzRMa1d3TjNWNDdXa0JxclRMOWlSYk1hbHhEdGJoUEpZckg0UVcwQVdLWTNjcDp8Ojp8OjRSeGVvVmZqRmZIb2VxVG0ydEljd0E9PQ==" frameborder="0" scrolling="no" allowfullscreen=""></iframe>
+<iframe src="https://hentaihaven.xxx/wp-content/plugins/player-logic/player.php?data=Y2tRWXZpQ2RlR1NESCtENjB4MnowNmxPaFAwWmdRWXBjUDZhczFlVUNYY2lsQU1CT3dwbEszODA1NVlLaTUyMUtiYnFqRWN5c3FKVjZRSG0rSHZvdnd1aTdMMWZpcXR4d0Y0Q3BQNFBRWlJJUitmZUNXZW40UXlKOHdBQ3dWeEJZeDRIbGpvYWpyTkpNVk5CUTBZZkgvczJiZ1A3cWJXMndhQ1JDdTd2Z3dTMTVDeDdRY0pxZ2xZT0dmbHZJNzd2SXpKS3NqVlZYdWhUcGYrSy9rUEsvR0xTdVNUOGMvRGlJbDJrZjRWQlBFRW9RekUvUlF0cnllcEUrV1FnUkk1eDp8Ojp8OkxKUFNQMTQrK3VxRzlPRUhHOVlSNEE9PQ==" frameborder="0" scrolling="no" allowfullscreen=""></iframe>
+<iframe src="https://hentaihaven.xxx/wp-content/plugins/player-logic/player.php?data=R1M0UVZ0VFJOeVBYM1Q0dDFCaTdoK1RuZHk4K0tHOGZHamdjUjVUZnhvdjQ5VW5qbWkzU0Rxclh0enZ3WTFNKzByZmhSSnorTitPOVpJZmZhRHZwSGR5OW1jQ3JiN0Z4aElxMTdlWDNza0RXMmxqVUQwV1JrcHRBRTNFeFpsT2xuWkkwWmtXZkZuM3F4QUtMMXVyblpZa05JWnBsazZpSU52eVB4VjhWSzkxYXlHVFRPYWVkQnFKeWkrejJGMEZlVXk3OWhJQ1lJaU90QmZUYnVKU2QvUkNpRWhLMUhxR0dOd2ZhMEVqVGpzcz06fDo6fDpidVpORHA5UjZBZ3Z6bURsd1FMdjJBPT0=" frameborder="0" scrolling="no" allowfullscreen=""></iframe>
+<iframe src="https://hentaihaven.xxx/wp-content/plugins/player-logic/player.php?data=bjRHTlRYVDYwem5QWjBJRW9QZm9aRi81S2FGK1ZKeHFtTUtYY1dlVjhkZ3VCQkJuNUd6TkxrLytqS1ZPRDAxVjByOGpvb3lJWkRhSE9WcjA0L2lhSUlqNy9kckkydkdNTFViV0F1YTFJUWt6UDR3Z0lFZTR6ZmZwNlQ3Nkt6aVRSekRUTWx1bXI3SENLeFJ0Z1R2bmZIL3NkQ2UreXErbk9RTExLSC9SbTBFdFJkd2wzRGJzRWZXNWVpTitQOU5DSk1xQ3Iyci9iSkY2cjJhNlRlTVc0TURlQndITDdxNXZFQjJ4R2RJT3ltOD06fDo6fDp6WUZ1ckthc0pYSHlGOG1JK1NheUxnPT0=" frameborder="0" scrolling="no" allowfullscreen=""></iframe>
+<iframe src="https://hentaihaven.xxx/wp-content/plugins/player-logic/player.php?data=bnRXRXk2MmpsWVJnSEJ2TWhWRGNwYmdNVzIvTmlFMEhuN3NFb283UmYybzVYRTg2ZDBvL0pwbDA4MXlGcjRNbCtZZGdNYkdvYmtYY3RnWE4wLy8zWHNlbmVpWDhRQkRabU40a2FGdTJaZHdBMjdENkNIelZreDdHZzE3d1JYQjJhL3FrQVREWGtBRjE4Yk5iQWhxbGZGaUF1ZlRLbzkrbGZ6TloyT3lmVmV2ei8xOVBtN1piQSs4RTNGREpVcElxUXgxMkRGZU5BY3F6YXdYZitIZ0hiTFdZb3lNVDk0OGFuckNqQVhzUFcrbFZ2aEVvWUlFbTd3cC9xaVJJMEcvV0Ixbk5qOFVOOWxON01UWk8wS2NmUWZmbXhiaEFkMU0rMzdvRnpidml0K1dXdUR2bWVISVdVQmJnVm9VN0pjS2J5RGR3WDhHdFVvVjRGNGU5VjhZdDZ3PT06fDo6fDpHV29QL1pOdWoraFI2T1VzZmFPQ3RBPT0=" frameborder="0" scrolling="no" allowfullscreen=""></iframe>
+<iframe src="https://hentaihaven.xxx/wp-content/plugins/player-logic/player.php?data=L3h2UEZyd09NSlZzbDgwS1FPdHVYQUEzNEY0YnR1RVZWRDFlWWZBNXlhTmFmdDN4QllUcS8xamRpaVA2MGJ6RFdZSGdnR2w0SHJjalViZGZONWF3YU1BRWhIOS9rNEVoRDlTdVJ5NjE4bHZ6ZHJrOHRFeGFHUVJTdTBYbTgxenZVeVBRS0M3MUgwbEF5UGh3a0dra3J0RE9WUnZiZ2R6VHpFbWJvU1ZLbUVwUXZzb2xHVjJFQUVnZzlpRy9zTG9LRzFPZFhMb21lTHNIR0Q1cDNqVWVoZz09Onw6Onw6N0loSitWNmZXdHZqTUgxMWd4enNrZz09" frameborder="0" scrolling="no" allowfullscreen=""></iframe>
+<iframe src="https://hentaihaven.xxx/wp-content/plugins/player-logic/player.php?data=YjRoNENGNXdlZUJYNjF2VXR3ZGt0Y2YwRTNidTl2Um5zZFlNK3dEUWp0N201dmhaaXJtbGJxR2I1MmhwNnJZS3FWSmpka21wN05NWmk0Wit4T29acXdhOFNTVzhZNko1cCtmbEU5YStMdHlqWlBqQk5FQm5zT0szUTQ3eTYrOFN6RVZNTWdVaFhoRVRETzkvUzdhNFJ3NE9WNS9ZV3pvc0hHUnJ1L0ptRkV1TEJnTzc2M2lnWmU4b1ZsM2hKUkJBYXRNR0JUKys3WUVSK3BxV3RxalBOM1JSd0psUTA4aE00Mm5pcDVkdFI0MEFjNkFLZm15M2djTCtZNWZvdk1qaWd6Yy9IUFY1RXREWk04WW1PbGhMeXkyRCs1SjJYbDlOWUROclpqL2htR3VXYk8xRUhTUS84Q28vOVZFV1hmWjNZY21tRVlFN0tGOTdTNWUrcWpBenZBPT06fDo6fDoxYjE1K1NjZ1FEMERIaUtHanNPVk9nPT0=" frameborder="0" scrolling="no" allowfullscreen=""></iframe>
+<iframe src="https://hentaihaven.xxx/wp-content/plugins/player-logic/player.php?data=YTcyTE9ueEZWcDB5aDBkQ1NqZFd6akx5UVB2Q0pIR3I2QzRlOWp4M2dXWjBlVTcwN3h5WWRTNHg3WWl0Qm4vekRWckJ5NVYzR1FLQ2pveFdQR1M3WU5ldmlsMHYwZnB2REgvWExZM1ZuMmIwYnlhbGVicTUwa0hPdkVPTkpkZDRJY1lSNzlEcEl6TXV6ZCt5MTVQb3g4dy9yamZLWnZFaGxtcDVsSHppNlhMZG1TQnYzWlVhdzFFSWhRQlJFMXgvVm1uWGxyS2NIS3ROVWhOcmRudUlzUVBMdFJuZ1hBV1pYaVloVjNVMkYvaWZmNkpyQTk1b1ROMEFIU1pIeFkxVXVKZDdsWVpqUzBmWDFveFZrRi9NSml0OUR0VURvcGl6cHV1WUdSSnhsME8weHdXWkFnVXIyWCtnZC9SNmZaZUtlS1FZenhvNTdSTlB5MXdGLzROUmRBPT06fDo6fDplbGFjK0xYaytKeTRIdVB0dnFFaFBnPT0=" frameborder="0" scrolling="no" allowfullscreen=""></iframe>
+
+</body>
+</html>
 <audio class="Audio1" controls>
   <source src="voice1.mp3" type="audio/MP3">
 </audio>
