@@ -42,8 +42,9 @@ audio {
     background-color: #333;
     display: flex;
     justify-content: space-around;
-    padding: 10px 0;
-    z-index: 1000; /* Ensure it stays above all other elements */
+    padding: 10px 20px;
+    z-index: 1000;
+    align-items: center;
 }
 
 .navbar a {
@@ -51,12 +52,68 @@ audio {
     color: white;
     padding: 10px 20px;
     font-size: 18px;
+    display: block;
 }
 
 .navbar a:hover {
     background-color: #575757;
     border-radius: 5px;
 }
+
+.navbar .menu {
+    display: flex;
+    width: 93%; /* Make the menu take full width */
+    justify-content: space-between; /* Spread items out across the width */
+}
+
+.navbar .menu a {
+    margin: 0 10px;
+}
+
+.navbar .hamburger {
+    display: none;
+    cursor: pointer;
+}
+
+.navbar .hamburger div {
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    margin: 5px 0;
+}
+
+/* Mobile styles */
+@media screen and (max-width: 768px) {
+    .navbar {
+        justify-content: space-between;
+    }
+    .navbar .menu {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background-color: #333;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        padding: 20px 0;
+        z-index: 1001;
+    }
+
+    .navbar .menu a {
+        margin: 10px 0;
+        text-align: center;
+        padding: 10px 0;
+    }
+
+    .navbar .hamburger {
+        display: block;
+    }
+
+    .navbar.active .menu {
+        display: flex;
+    }
+}
+
 </style>
 <div class="navbar">
     <div class="hamburger" onclick="toggleNavbar()">
@@ -120,4 +177,10 @@ audio {
   <img src="masdilartbuck.webp">
   <img src="russian 5585.webp">
   <img src="sefu.webp">
+<script>
+function toggleNavbar() {
+    var navbar = document.querySelector('.navbar');
+    navbar.classList.toggle('active');
+}
+</script>
 </html>
