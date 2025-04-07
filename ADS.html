@@ -219,6 +219,13 @@ function toggleNavbar() {
     var navbar = document.querySelector('.navbar');
     navbar.classList.toggle('active');
 }
+window.addEventListener('DOMContentLoaded', () => {
+    const navbar = document.querySelector('.navbar');
+    const body = document.body;
+    if (navbar) {
+        body.style.paddingTop = navbar.offsetHeight + 'px';
+    }
+});
 </script>
 </body>
 </html>
